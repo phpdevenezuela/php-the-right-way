@@ -1,4 +1,5 @@
 ---
+title:   Conferencias
 isChild: true
 anchor:  conferences
 ---

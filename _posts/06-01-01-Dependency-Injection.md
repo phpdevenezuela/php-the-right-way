@@ -1,5 +1,5 @@
 ---
-title:  Dependency Injection
+title:  Inyección de Dependencia
 anchor: dependency_injection
 ---
 
@@ -7,7 +7,7 @@ anchor: dependency_injection
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
+> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it
 > possible to change them, whether at run-time or compile-time.
 
 This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a

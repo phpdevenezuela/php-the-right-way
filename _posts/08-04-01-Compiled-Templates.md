@@ -1,4 +1,5 @@
 ---
+title:   Plantillas Compiladas
 isChild: true
 anchor:  compiled_templates
 ---

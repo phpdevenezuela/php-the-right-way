@@ -1,4 +1,5 @@
 ---
+title:   Cifrado de Contraseñas
 isChild: true
 anchor:  password_hashing
 ---
@@ -35,7 +36,7 @@ if (password_verify('bad-password', $passwordHash)) {
 } else {
     // Wrong password
 }
-{% endhighlight %}  
+{% endhighlight %}
 
 
 * [Learn about `password_hash()`] [1]

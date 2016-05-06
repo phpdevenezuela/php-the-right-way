@@ -1,4 +1,5 @@
 ---
+title:   Plantillas con PHP Plano
 isChild: true
 anchor:  plain_php_templates
 ---

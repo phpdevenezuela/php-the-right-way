@@ -1,4 +1,5 @@
 ---
+title:   Reporte de Errores
 isChild: true
 anchor:  error_reporting
 ---

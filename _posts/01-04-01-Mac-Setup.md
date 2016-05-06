@@ -1,4 +1,5 @@
 ---
+title:   Configuración en MAC
 isChild: true
 anchor:  mac_setup
 ---

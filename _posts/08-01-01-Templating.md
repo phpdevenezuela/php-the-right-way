@@ -1,5 +1,5 @@
 ---
-title:  Templating
+title:  Plantillas
 anchor: templating
 ---
 

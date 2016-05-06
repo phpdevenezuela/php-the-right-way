@@ -1,4 +1,5 @@
 ---
+title:   Caché de Objetos
 isChild: true
 anchor:  object_caching
 ---

@@ -1,6 +1,6 @@
 ---
 isChild: true
-title:   PDO Extension
+title:   Extensión PDO
 anchor:  pdo_extension
 ---
 

@@ -1,4 +1,5 @@
 ---
+title:   Composer y Packagist
 isChild: true
 anchor:  composer_and_packagist
 ---
@@ -38,7 +39,7 @@ directory in your command line.
 
 ### How to Install Composer (manually)
 
-Manually installing Composer is an advanced technique; however, there are various reasons why a 
+Manually installing Composer is an advanced technique; however, there are various reasons why a
 developer might prefer this method vs. using the interactive installation routine. The interactive
 installation checks your PHP installation to ensure that:
 
@@ -48,7 +49,7 @@ installation checks your PHP installation to ensure that:
 - certain problematic extensions are not loaded
 - certain `php.ini` settings are set
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is 
+Since a manual installation performs none of these checks, you have to decide whether the trade-off is
 worth it for you. As such, below is how to obtain Composer manually:
 
 {% highlight console %}
@@ -56,7 +57,7 @@ curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
 chmod +x $HOME/local/bin/composer
 {% endhighlight %}
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment 
+The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment
 variable. This will result in a `composer` command being available.
 
 When you come across documentation that states to run Composer as `php composer.phar install`, you can
@@ -71,7 +72,7 @@ This section will assume you have installed composer globally.
 ### How to Define and Install Dependencies
 
 Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it
-by hand if you like, or use Composer itself. The `composer require` command adds a project dependency 
+by hand if you like, or use Composer itself. The `composer require` command adds a project dependency
 and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig]
 as a dependency of your project.
 
@@ -81,14 +82,14 @@ composer require twig/twig:~1.8
 
 Alternatively the `composer init` command will guide you through creating a full `composer.json` file
 for your project. Either way, once you've created your `composer.json` file you can tell Composer to
-download and install your dependencies into the `vendor/` directory. This also applies to projects 
+download and install your dependencies into the `vendor/` directory. This also applies to projects
 you've downloaded that already provide a `composer.json` file:
 
 {% highlight console %}
 composer install
 {% endhighlight %}
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's 
+Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's
 autoloader for your project dependencies.
 
 {% highlight php %}
@@ -103,11 +104,11 @@ Now you can use your project dependencies, and they'll be autoloaded on demand.
 Composer creates a file called `composer.lock` which stores the exact version of each package it
 downloaded when you
 first ran `composer install`. If you share your project with other coders and the `composer.lock` file
-is part of your distribution, when they run `composer install` they'll get the same versions as you. 
+is part of your distribution, when they run `composer install` they'll get the same versions as you.
 To update your dependencies, run `composer update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version 
-requirement of `~1.8` means "anything newer than `1.8.0`, but less than `2.0.x-dev`". You can also use 
+This is most useful when you define your version requirements flexibly. For instance a version
+requirement of `~1.8` means "anything newer than `1.8.0`, but less than `2.0.x-dev`". You can also use
 the `*` wildcard as in `1.8.*`. Now Composer's `composer update` command will upgrade all your
 dependencies to the newest version that fits the restrictions you define.
 
@@ -125,7 +126,7 @@ file and tell you if you need to update any of your dependencies.
 ### Handling global dependencies with Composer
 
 Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need
-to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it 
+to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it
 available globally, you'd run the following command:
 
 {% highlight console %}
@@ -133,7 +134,7 @@ composer global require phpunit/phpunit
 {% endhighlight %}
 
 This will create a `~/.composer` folder where your global dependencies reside. To have the installed
-packages' binaries available everywhere, you'd then add the `~/.composer/vendor/bin` folder to your 
+packages' binaries available everywhere, you'd then add the `~/.composer/vendor/bin` folder to your
 `$PATH` variable.
 
 * [Learn about Composer]

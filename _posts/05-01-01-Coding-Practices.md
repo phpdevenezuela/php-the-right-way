@@ -1,4 +1,5 @@
 ---
+title:  Buenas Prácticas
 anchor: coding_practices
 ---
 

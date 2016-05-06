@@ -1,6 +1,6 @@
 ---
 isChild: true
-title:   Abstraction Layers
+title:   Capas de Abstracción
 anchor:  databases_abstraction_layers
 ---
 

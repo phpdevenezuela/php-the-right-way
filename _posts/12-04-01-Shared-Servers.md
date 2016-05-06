@@ -1,4 +1,5 @@
 ---
+title:   Servidores Compartidos
 isChild: true
 anchor:  shared_servers
 ---

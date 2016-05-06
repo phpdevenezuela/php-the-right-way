@@ -1,4 +1,5 @@
 ---
+title:   Lecturas Recomendadas
 isChild: true
 anchor:  further_reading
 ---

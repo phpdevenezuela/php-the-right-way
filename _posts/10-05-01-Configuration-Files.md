@@ -1,4 +1,5 @@
 ---
+title:   Archivos de Configuración
 isChild: true
 anchor:  configuration_files
 ---
