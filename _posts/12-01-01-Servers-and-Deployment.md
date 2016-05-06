@@ -1,8 +1,7 @@
 ---
-title: Servidores y Despliegue
-anchor: servidores-y-despliegue
+anchor: servers_and_deployment
 ---
 
-# Servidores y Despliegue
+# Servers and Deployment {#servers_and_deployment_title}
 
-Las aplicaciones PHP se pueden desplegar y ejecutar en servidores web de producción de varias maneras.
+PHP applications can be deployed and run on production web servers in a number of ways.

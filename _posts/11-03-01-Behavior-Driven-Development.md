@@ -1,19 +1,31 @@
 ---
-title: Desarrollo Guiado por Comportamiento
-anchor: bdd
 isChild: true
+anchor:  behavior_driven_development
 ---
 
-## Desarrollo Guiado por Comportamiento {#bdd}
+## Behavior Driven Development {#behavior_driven_development_title}
 
-Existen dos tipos diferentes de Desarrollo Guiado por Comportamiento (BDD, por sus siglas en inglés): SpecBDD y StoryBDD. SpecBDD se enfoca en el comportamiento o funcionamiento técnico o de parte del código, mientras que StoryBDD se enfoca en el funcionamiento de negocios, el comportamiento de las características o las interacciones. PHP proporciona armazones para estos dos tipos de BDD.
+There are two different types of Behavior-Driven Development (BDD): SpecBDD and StoryBDD. SpecBDD focuses on technical
+behavior of code, while StoryBDD focuses on business or feature behaviors or interactions. PHP has frameworks for both
+types of BDD.
 
-Con el StoryBDD, se escriben historias legibles que describen el comportamiento de su aplicación. Estas historias pueden ser ejecutadas como pruebas en contra de su aplicación. El armazón que se utiliza en PHP para StoryBDD se llama Behat, el cual fue inspirado por el proyecto [Cucumber](http://cukes.info/) de Ruby e implementa el Gherking DSL para describir el comportamiento de características.
+With StoryBDD, you write human-readable stories that describe the behavior of your application. These stories can then
+be run as actual tests against your application. The framework used in PHP applications for StoryBDD is [Behat], which
+is inspired by Ruby's [Cucumber] project and implements the Gherkin DSL for describing feature behavior.
 
-Con el SpecBDD, se escriben las especificaciones que describen como su código debe de funcionar. En vez de probar una función o método, solo se describe como la función o método se tiene que comportar. PHP ofrece el armazón [PHPSpec](http://www.phpspec.net/) para este propósito. Este armazon fue inspirado por el proyecto [RSpec](http://rspec.info/) de Ruby.
+With SpecBDD, you write specifications that describe how your actual code should behave. Instead of testing a function
+or method, you are describing how that function or method should behave. PHP offers the [PHPSpec] framework for this
+purpose. This framework is inspired by the [RSpec project][Rspec] for Ruby.
 
-### Enlaces de BDD
+### BDD Links
 
-* [Behat](http://behat.org/) el armazón de StoryBDD para PHP
-* [PHPSpec](http://www.phpspec.net/) el armazón deSpecBDD paraPHP
-* [Codeception](http://www.codeception.com) es un armazón completo para pruebas que utiliza los principios de BDD
+* [Behat], the StoryBDD framework for PHP, inspired by Ruby's [Cucumber] project;
+* [PHPSpec], the SpecBDD framework for PHP, inspired by Ruby's [RSpec] project;
+* [Codeception] is a full-stack testing framework that uses BDD principles.
+
+
+[Behat]: http://behat.org/
+[Cucumber]: http://cukes.info/
+[PHPSpec]: http://www.phpspec.net/
+[RSpec]: http://rspec.info/
+[Codeception]: http://codeception.com/

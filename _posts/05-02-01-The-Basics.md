@@ -1,14 +1,13 @@
 ---
-title: Fundamentos
-anchor: fundamentos
 isChild: true
+anchor:  the_basics
 ---
 
-## Fundamentos {#fundamentos}
+## The Basics {#the_basics_title}
 
-PHP es un gran lenguaje que permite a cualquier desarrollador producir código de forma rápida y de manera eficiente.
-Sin embargo, mientras que avanzamos con el lenguaje, a menudo olvidamos (o pasamos por alto) las prácticas básicas que
-aprendimos al inicio, tomando así atajos o malas prácticas. Para ayudar a combatir este problema común, esta sección
-tiene como objetivo recordar a los desarrolladores las buenas prácticas dentro de PHP.
+PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently.
+However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor
+of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the
+basic coding practices within PHP.
 
-* Continua leyendo acerca de [Los Fundamentos](./pages/The-Basics.html)
+* Continue reading on [The Basics](/pages/The-Basics.html)

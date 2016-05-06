@@ -1,6 +1,5 @@
 ---
-title: Aspectos Destacados del Lenguaje
-anchor: aspectos-destacados-del-lenguaje
+anchor: language_highlights
 ---
 
-# Aspectos Destacados del Lenguaje
+# Language Highlights {#language_highlights_title}

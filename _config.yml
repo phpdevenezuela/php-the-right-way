@@ -1,6 +1,5 @@
 safe: true
 url: http://localhost:4000
-baseurl: /php-the-right-way
 
 timezone: America/Caracas
 

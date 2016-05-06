@@ -1,12 +1,16 @@
 ---
-title: Use la versión estable actual (5.6)
-anchor: use-la-version-estable-actual
+title:   Use the Current Stable Version (7.0)
 isChild: true
+anchor:  use_the_current_stable_version
 ---
 
-## Use la versión estable actual (5.6) {#use-la-version-estable-actual}
+## Use the Current Stable Version (7.0) {#use_the_current_stable_version_title}
 
-Si está dando sus primeros pasos con PHP, asegúrese de usar con la última versión estable (current stable) de [PHP 5.6][php-release]. En los últimos años se ha progresado mucho añadiendo [nuevas y potentes características](#language_highlights) a PHP. Aunque la diferencia entre las versiones 5.2 y 5.6 aparenta ser mínima, en realidad la nueva versión representa _grandes_ mejoras en el sistema. Si estás buscando alguna función en particular o su modo de uso, la documentación oficial en [php.net][php-docs] tendrá la respuesta.
+If you are getting started with PHP, start with the current stable release of [PHP 7.0][php-release]. PHP 7.0 is very
+new, and adds many amazing [new features](#language_highlights) over the older 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions.
 
-[php-release]: http://www.php.net/downloads.php
-[php-docs]: http://www.php.net/manual/es/
+Most commonly in the near future you will find PHP 5.x being used, and the latest 5.x version is 5.6. This is not a bad option, but you should try to upgrade to the latest stable quickly. Upgrading is really quite easy, as there are not many [backwards compatibility breaks][php70-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+
+[php-release]: http://php.net/downloads.php
+[php-docs]: http://php.net/manual/
+[php70-bc]: http://php.net/manual/migration70.incompatible.php

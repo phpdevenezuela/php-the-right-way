@@ -1,14 +1,24 @@
 ---
-title: Herramientas Complementarias de Pruebas
-anchor: herramientas-complementarias-pruebas
 isChild: true
+anchor:  complementary_testing_tools
 ---
 
-## Herramientas Complementarias de Pruebas {#herramientas-complementarias-pruebas}
+## Complementary Testing Tools {#complementary_testing_tools_title}
 
-Además de armazones para pruebas individuales y guiados por comportamiento, también existen varios armazones genéricos y librerías auxiliares que son útiles para cualquier enfoque que se tome.
+Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper
+libraries useful for any preferred approach taken.
 
-### Enlaces de herramientas
+### Tool Links
 
-* [Selenium](http://seleniumhq.org/) es una herramienta de automatización del navegador que puede ser [integrada a PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
-* [Mockery](https://github.com/padraic/mockery) es un armazón para objetos de maqueta que puede ser integrado con [PHPUnit](http://phpunit.de/) o [PHPSpec](http://www.phpspec.net/)
+* [Selenium] is a browser automation tool which can be [integrated with PHPUnit]
+* [Mockery] is a Mock Object Framework which can be integrated with [PHPUnit] or [PHPSpec]
+* [Prophecy] is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with
+[PHPSpec] and can be used with [PHPUnit].
+
+
+[Selenium]: http://seleniumhq.org/
+[integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
+[Mockery]: https://github.com/padraic/mockery
+[PHPUnit]: http://phpunit.de/
+[PHPSpec]: http://www.phpspec.net/
+[Prophecy]: https://github.com/phpspec/prophecy

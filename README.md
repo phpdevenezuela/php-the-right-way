@@ -18,8 +18,9 @@ _PHP: La Manera Correcta_ tiene imágenes que puedes utilizar como _banners_ en 
 ## Como Contribuir
 
 1. _Fork_ y edita
-2. Opcionalmente instala [Ruby](https://rvm.io/rvm/install/) con la gema [Jekyll](https://github.com/mojombo/jekyll/) para una previsualización local.
-3. Envía tus _pull request_ para su consideración.
+2. Instala [Ruby](https://rvm.io/rvm/install/) con la gema [Jekyll](https://github.com/mojombo/jekyll/) para una previsualización local.
+3. Instala las gemas del proyecto (configuradas en el Gemfile) ejecutando: bundle install
+4. Envía tus _pull request_ para su consideración.
 
 ### Guía de Estilo para los Contribuyentes.
 
@@ -70,7 +71,7 @@ Ha habido mucha discusión últimamente acerca de cómo la comunidad PHP carece 
 
 ## ¿Quién?
 
-Mi nombre es [Josh Lockhart](http://twitter.com/codeguy). Soy el autor de [Slim Framework](http://www.slimframework.com/), y trabajo para [New Media Campaigns](http://www.newmediacampaigns.com/).
+El autor origina es [Josh Lockhart](http://twitter.com/codeguy). Creador de [Slim Framework](http://www.slimframework.com/), y trabaja para [New Media Campaigns](http://www.newmediacampaigns.com/).
 
 ### Colaboradores
 

@@ -1,3 +1,3 @@
 /_site/
 *.DS_Store
-.rvmrc
+node_modules

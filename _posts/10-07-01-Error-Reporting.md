@@ -1,31 +1,55 @@
 ---
-title: Reporte de Errores
-anchor: reporte-de-errores
 isChild: true
+anchor:  error_reporting
 ---
 
-## Reporte de Errores
+## Error Reporting {#error_reporting_title}
 
-El registro de errores puede ser muy útil para encontrar los lugares donde existen problemas en su aplicación, pero también puede exponer información acerca de la estructura de su aplicación al exterior. Para proteger efectivamente su aplicación de problemas que pudieran ser causados por la salida de mensajes de error, necesita configurar su servidor de desarrollo de diferente manera que su servidor de producción.
+Error logging can be useful in finding the problem spots in your application, but it can also expose information about
+the structure of your application to the outside world. To effectively protect your application from issues that could
+be caused by the output of these messages, you need to configure your server differently in development versus
+production (live).
 
-### Desarrollo
+### Development
 
-Para mostrar los errores durante el **desarrollo** de su aplicación, configure las siguientes opciones en su archivo `php.ini`:
+To show every possible error during **development**, configure the following settings in your `php.ini`:
 
-- display_errors: On
-- error_reporting: E_ALL
-- log_errors: On
+{% highlight ini %}
+display_errors = On
+display_startup_errors = On
+error_reporting = -1
+log_errors = On
+{% endhighlight %}
 
-### Producción
+> Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP
+> versions. The `E_ALL` constant also behaves this way as of PHP 5.4. -
+> [php.net](http://php.net/function.error-reporting)
 
-Para esconder los errores en su entorno de **producción**, configure su archivo `php.ini` de la siguiente manera:
+The `E_STRICT` error level constant was introduced in 5.3.0 and is not part of `E_ALL`, however it became part of
+`E_ALL` in 5.4.0. What does this mean? In terms of reporting every possible error in version 5.3 it means you must
+use either `-1` or `E_ALL | E_STRICT`.
 
-- display_errors: Off
-- error_reporting: E_ALL
-- log_errors: On
+**Reporting every possible error by PHP version**
 
-Con estas opciones en su entorno de producción, los errores seguirán siendo registrados en los registros de errores de su servidor web, pero no serán mostrados al usuario. Para más información en cuanto a estas opciones, vea el manual de PHP:
+* &lt; 5.3 `-1` or `E_ALL`
+* &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
+* &gt; 5.3 `-1` or `E_ALL`
 
-* [Error_reporting](http://www.php.net/manual/es/errorfunc.configuration.php#ini.error-reporting)
-* [Display_errors](http://www.php.net/manual/es/errorfunc.configuration.php#ini.display-errors)
-* [Log_errors](http://www.php.net/manual/es/errorfunc.configuration.php#ini.log-errors)
+### Production
+
+To hide errors on your **production** environment, configure your `php.ini` as:
+
+{% highlight ini %}
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL
+log_errors = On
+{% endhighlight %}
+
+With these settings in production, errors will still be logged to the error logs for the web server, but will not be
+shown to the user. For more information on these settings, see the PHP manual:
+
+* [error_reporting](http://php.net/errorfunc.configuration#ini.error-reporting)
+* [display_errors](http://php.net/errorfunc.configuration#ini.display-errors)
+* [display_startup_errors](http://php.net/errorfunc.configuration#ini.display-startup-errors)
+* [log_errors](http://php.net/errorfunc.configuration#ini.log-errors)

@@ -1,20 +1,35 @@
 ---
-title: Configuración en Windows
-anchor: configuracion-windows
 isChild: true
+anchor:  windows_setup
 ---
 
-## Configuración en Windows {#configuracion-windows}
+## Windows Setup {#windows_setup_title}
 
-Hay un sinnúmero de maneras de configurar PHP en el sistema Windows. Usted puede [descargar los binarios](php-downloads) y recientemente el paquete de instalación estaba disponible en el formato '.msi'. Este paquete de instalación ya no se actualiza y la última versión fue PHP 5.3.0.
+You can download the binaries from [windows.php.net/download][php-downloads]. After the extraction of PHP, it is recommended to set the [PATH][windows-path] to the root of your PHP folder (where php.exe is located) so you can execute PHP from anywhere.
 
-Para aprender PHP o el desarrollo local, se puede utilizar el servidor web embebido que viene con la versión PHP 5.4, así no tendrá que preocuparse por configurar un servidor por separado. Ahora bien, si le gustaría disponer de una solución tipo “todo incluido”, que le ofrece un servidor web completo junto con el gestor de base de datos MySQL, entonces herramientas como el [Web Platform Installer][wpi], [XAMPP][xampp] y [WAMP][wamp] le ayudaran a configurar un entorno de desarrollo web en Windows más fácilmente y en menos tiempo. Tenga en consideración que estas herramientas son un poco diferentes a las que usara en su sistema de producción, así que tenga cuidado de las diferencias en el entorno de su aplicación si es que la desarrolla en Windows pero la despliega en Linux.
+For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
+configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
+as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
+help get a Windows development environment up and running fast. That said, these tools will be a little different from
+production so be careful of environment differences if you are working on Windows and deploying to Linux.
 
-Si necesita correr un sistema de producción en Windows entonces el servidor IIS 7 le ofrecerá un entorno más estable y con el mejor rendimiento.  Una herramienta como [phpmanager][phpmanager] (un complemento GUI para IIS 7) le simplificara la gestión y configuración de PHP en este servidor. IIS 7 viene configurado con FastCGI listo para su uso, solo necesita apuntar a PHP como controlador. Para más información y recursos adicionales refiérase a la [área dedicada en iis.net][php-iis] para PHP.
+If you need to run your production system on Windows then IIS7 will give you the most stable and best performance. You
+can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with
+FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
+there is a [dedicated area on iis.net][php-iis] for PHP.
 
-[php-downloads]: http://windows.php.net
+Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
+live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
+
+Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+
+[easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/
+[openserver]: http://open-server.ru/
+[wamp]: http://www.wampserver.com/en/
+[php-downloads]: http://windows.php.net/download/
+[php-iis]: http://php.iis.net/
+[windows-path]: http://www.windows-commandline.com/set-path-command-line/
+[windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
-[wamp]: http://www.wampserver.com/
-[php-iis]: http://php.iis.net/
