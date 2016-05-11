@@ -1,6 +1,6 @@
 ---
 title:  Buenas Prácticas
-anchor: coding_practices
+anchor: buenas_practicas
 ---
 
-# Coding Practices {#coding_practices_title}
+# Buenas Prácticas {#buenas-practicas}
