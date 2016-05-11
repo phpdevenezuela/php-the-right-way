@@ -3,5 +3,5 @@ title:  Primeros Pasos
 anchor: getting_started
 ---
 
-# Getting Started {#getting_started_title}
+# Primeros Pasos {#getting_started_title}
 
