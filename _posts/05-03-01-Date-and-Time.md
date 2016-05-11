@@ -1,10 +1,10 @@
 ---
 title:   Fecha y Hora
 isChild: true
-anchor:  fecha-y-hora
+anchor:  fecha_y_hora
 ---
 
-## Fecha y Hora {#fecha_y_hora}
+## Fecha y Hora {#fecha-y-hora}
 
 PHP dispone de una clase llamada DateTime que le ayuda cuando lee, escribe, compara o hace cálculos con fechas y horas. Existen muchas funciones relacionadas con el manejo de fecha y hora en PHP además de DateTime, sin embargo, esta clase le provee de una excelente interfaz orientada a objetos para los usos más comunes. Puede manejar husos horarios, pero eso está fuera de esta breve introducción.
 
