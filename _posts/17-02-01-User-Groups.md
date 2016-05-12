@@ -11,10 +11,10 @@ la lista de [php.net][php-uglist] que se basa en los resultados de [PHP.ug][php-
 través de la página [Meetup.com][meetup] ó realizando una consulta en tu motor de búsqueda favorito (por ejemplo:
 [Google][google]). Si vives en una ciudad pequeña, quizás no exista un grupo local; si ese es el caso: ¡Crea uno!
 
-Deben recibir menciones especiales dos grupos de usuarios globales: [NomadPHP] y [PHPWomen]. [NomadPHP] ofrece dos ve
-ces por mes conferencias en línea con presentaciones de algunos de los mejores oradores de la comunidad PHP. [PHPWomen]
-es un grupo de usuario no exclusivo originalmente enfocado hacia las mujeres dentro del mundo de PHP. La membresía es a
-bierta a todo aquel que apoye una comunidad más diversa. [PHPWomen] ofrece una red de soporte, mentoría y educación, y
+Deben recibir menciones especiales dos grupos de usuarios globales: [NomadPHP] y [PHPWomen]. [NomadPHP] ofrece dos veces
+por mes conferencias en línea con presentaciones de algunos de los mejores oradores de la comunidad PHP. [PHPWomen] es
+un grupo de usuario no exclusivo originalmente enfocado hacia las mujeres dentro del mundo de PHP. La membresía está
+abierta a todo aquel que apoye una comunidad más diversa. [PHPWomen] ofrece una red de soporte, mentoría y educación, y
 generalmente promueve la creación de entornos profesionales "amigables con las mujeres".
 
 [Lea más sobre grupos de usuarios en la PHP Wiki][php-wiki]
