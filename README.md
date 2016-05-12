@@ -74,7 +74,7 @@ Ha habido mucha discusión últimamente acerca de cómo la comunidad PHP carece 
 
 ## ¿Quién?
 
-El autor origina es [Josh Lockhart](http://twitter.com/codeguy). Creador de [Slim Framework](http://www.slimframework.com/), y trabaja para [New Media Campaigns](http://www.newmediacampaigns.com/).
+El autor original es [Josh Lockhart](http://twitter.com/codeguy). Creador de [Slim Framework](http://www.slimframework.com/), y trabaja para [New Media Campaigns](http://www.newmediacampaigns.com/).
 
 ### Colaboradores
 
