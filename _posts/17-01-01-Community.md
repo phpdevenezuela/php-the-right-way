@@ -3,7 +3,7 @@ title:  Comunidad
 anchor: community
 ---
 
-# Community {#community_title}
+# Comunidad {#community_title}
 
 La comunidad de PHP es grande y diversa. Sus miembros están listos y dispuestos para apoyar a los nuevos programadores
 en PHP. Considere ser parte de un grupo local de usuarios PHP (PUG, por sus siglas en inglés) o participar en conferen
