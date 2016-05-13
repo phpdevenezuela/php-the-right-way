@@ -1,49 +1,35 @@
 ---
-title:  Guía de Estilo
+title:  Guía de estilo de programación
 anchor: code_style_guide
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# Guía de estilo de programación {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+La comunidad de PHP es grande y diversa, compuesta de innumerables librerías, frameworks y componentes. Es común para los desarrolladores PHP elegir varios de estos componentes y combinarlos dentro de un mismo proyecto. Por esto es importante que el código PHP se adhiera (en la medida de las posibilidades) a un estilo de programación común que permita de manera sencilla combinar e integrar varias librerías en sus proyectos.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own
-personal style.
+El [Framework Interop Group][fig] ha propuesto y aprobado una serie de recomendaciones de estilos. No todas ellas relacionadas al estilo de programación, pero si algunas como [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] y [PSR-4][psr4]. Estas recomendaciones son simplemente un grupo de reglas que algunos proyectos como Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium entre otros están comenzando a adoptar. Puedes usarlas para tus proyectos o seguir utilizando tu propio estilo de programación. 
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+Lo ideal sería que escribas código PHP que se adhiera a un estándar conocido. Dicho estándar pudiese ser cualquier combinación de los PSR mencionados anteriormente, o algún estándar de programación creado por PEAR o ZEND. Esto con la finalidad que otros desarrolladores puedan leer y trabajar con tu código de manera sencilla y las aplicaciones que implementen tus componentes puedan tener consistencia aunque estén trabajando con código de un tercero.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [Más sobre PSR-0][psr0]
+* [Más sobre PSR-1][psr1]
+* [Más sobre PSR-2][psr2]
+* [Más sobre PSR-4][psr4]
+* [Más sobre PEAR Coding Standards][pear-cs]
+* [Más sobre Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text 2][st-cs] to be given real time feedback.
+Otra recomendación es usar [PHP_CodeSniffer][phpcs] para verificar que el código no va en contra de cada una de estas recomendaciones o utilizar plugins para el editor texto que uses como por ejemplo [Sublime Text 2][st-cs] que permitan obtener en tiempo real información sobre el código que no se adhiera al estilo de programación elegido.
 
-You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
+Puedes corregir o mejorar de forma automática el diseño de tu código usando una de estas dos herramientas: La primera es [PHP Coding Standards Fixer][phpcsfixer] que tiene una base de estilos de código bien probada. La otra herramienta es [php.tools][phptools] que se hizo muy popular gracias a los plugins del editor Sublime Text[sublime-phpfmt][sublime-phpfmt], a pesar de ser nueva esta última herramienta, tiene grandes mejoras en el rendimiento, lo que significa que la corrección en tiempo real que el editor ofrece es más fluida.
 
-And you can run phpcs manually from shell:
+Puedes ejecutar el comando phpcs desde la consola de comandos de la siguiente manera:
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and descriptions how to fix them.
-It can also be helpful to include this command in a git hook.
-That way branches which contain violations against the chosen standard cannot enter the repository
-until those violations have been fixed.
+El comando anterior mostrará los errores y alguna descripción de como solventarlos.
+También es de gran ayuda incluir el comando anterior en un hook de git, de esa forma ramas del repositorio local que contengan violaciones contra el estándar elegido no podrá entrar en el repositorio principal hasta que dichas violaciones sean corregidas.
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+Es preferible el idioma Ingles para dar nombre a cualquier símbolo dentro de la infraestructura de código. Los comentarios pueden ser escritos en cualquier idioma que sea fácilmente legible por todas las partes presentes y futuras que pueden estar trabajando sobre la base del código.
 
 
 [fig]: http://www.php-fig.org/
