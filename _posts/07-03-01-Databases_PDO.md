@@ -6,12 +6,12 @@ anchor:  extension-pdo
 
 ## Extensión PDO {#extension-pdo}
 
-[PDO] es una librería para la abstracción de conexiones a bases de datos &mdash; fue incluída dentro de PHP a partir de la versión 5.1.0 &mdash; y provee una interfaz común para comunicarse con diferentes bases de datos. Por ejemplo, puede usarla de manera idéntica para escribir la interfaz de comunicación con MySQL o SQLite:
+[PDO] es una librería para la abstracción de conexiones a bases de datos &mdash; fue incluida dentro de PHP a partir de la versión 5.1.0 &mdash; y provee una interfaz común para comunicarse con diferentes bases de datos. Por ejemplo, puede usarla de manera idéntica para escribir la interfaz de comunicación con MySQL o SQLite:
 
 {% highlight php %}
 // PDO + MySQL
 $pdo = new PDO('mysql:host=ejemplo.com;dbname=basededatos', 'usuario', 'contraseña');
-$sql = $pdo->query("SELECT algun_field FROM alguna_tabla");
+$sql = $pdo->query("SELECT algun_campo FROM alguna_tabla");
 $fila = $sql->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($fila['algun_campo']);
 
