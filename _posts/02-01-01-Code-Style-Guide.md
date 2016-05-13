@@ -29,7 +29,7 @@ Puedes ejecutar el comando phpcs desde la consola de comandos de la siguiente ma
 El comando anterior mostrará los errores y alguna descripción de como solventarlos.
 También es de gran ayuda incluir el comando anterior en un hook de git, de esa forma ramas del repositorio local que contengan violaciones contra el estándar elegido no podrá entrar en el repositorio principal hasta que dichas violaciones sean corregidas.
 
-Es preferible el idioma Ingles para dar nombre a cualquier símbolo dentro de la infraestructura de código. Los comentarios pueden ser escritos en cualquier idioma que sea fácilmente legible por todas las partes presentes y futuras que pueden estar trabajando sobre la base del código.
+Es preferible el idioma inglés para dar nombre a cualquier símbolo dentro de la infraestructura de código. Los comentarios pueden ser escritos en cualquier idioma que sea fácilmente legible por todas las partes presentes y futuras que pueden estar trabajando sobre la base del código.
 
 
 [fig]: http://www.php-fig.org/
