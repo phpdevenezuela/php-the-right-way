@@ -4,19 +4,19 @@ isChild: true
 anchor:  windows_setup
 ---
 
-## Configuracion en Windows {#windows_setup_title}
+## Configuración en Windows {#windows_setup_title}
 
-Puedes descargar los binarios desde [windows.php.net/download][php-downloads]. Después de la extración de PHP, es recomendable agregar el [PATH][windows-path] a la raiz de tu directorio PHP (Donde esta localizado php.exe) para que puedas ejecutar PHP desde cual sitio.
+Puede descargar los binarios desde [windows.php.net/download][php-downloads]. Después de extraer los archivos de PHP, es recomendable agregar el [PATH][windows-path] a la raiz de tu directorio PHP (Donde esta localizado php.exe) para que pueda ejecutar PHP desde cualquier lugar de su sistema.
 
-Para el aprendizaje t desarrollo local puedes usar el Servidor Web Integrado con PHP 5.4+ por tanto no necesitas preocuparte por configurarlo. Si te gustaria algo "Todo-en-Uno" los cuales incluyen un servidor web completo y MySQL también entonces herramientas como [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] te ayduarán a tener un entorno de desarrollo listo y corriendo rapidamente. Hay que mencionar, que  estas herramientas seran un poco diferentes a entornos de producción por lo cual se muy cuidadoso de las diferencias de entornos si estas trabajando en Windows y desplegando en Linux.
+Para el aprendizaje y desarrollo local puedes usar el Servidor Web Integrado de PHP 5.4 o superior, por tanto no necesita preocuparse por configurar un servidor web por separado. Si desea alguna solución "Todo-en-Uno", los cuales incluyen un servidor web completo y MySQL, entonces herramientas como [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] le ayudarán a tener un entorno de desarrollo  corriendo de forma fácil y rápida. Hay que mencionar, que  estas herramientas son un poco diferentes a las que usará en su sistema de producción, así que tenga cuidado de las diferencias en el entorno de su aplicación si es que la desarrolla en Windows pero la despliega en Linux.
 
-Si necesitas correr tu sistema de produccion en Windows entonces IIS7 te dará mas estabilidad y mejor desempeño. Puedes usar [phpmanager][phpmanager] (a GUI plugin for IIS7) para hacer configuraciones y administraciones simples de PHP. IIS7 viene con FastCGI integrado y listo para usar, solo necesitaras configurar PHP como un manejador.
+Si necesita correr su sistema de producción en Windows entonces IIS7 le dará un entorno más estable y mejor desempeño. Puede usar herramientas como [phpmanager][phpmanager] (un complemento GUI para IIS7) para simplificar las configuraciones y administraciones de PHP en este servidor. IIS7 viene con FastCGI integrado y listo para su uso, solo necesitará apuntar a PHP como un controlador.
 
-Para soporte y recursos adicionales esta un [area dedicada en iis.net][php-iis] para PHP.
+Para mayor información y recursos adicionales dirijase al [area dedicada en iis.net][php-iis] para PHP.
 
-Generalemente correr tu aplicacion en diferentes entornos en desarrollo y production puede llevar a extraño errores apareciendo cuando vas en directo. Si estas desarrollando en Windows y desplegando en Linux (u otro distinto a Windows) entonces deberias considerar el uso de una [Maquina Virtual](/#virtualization_title).
+Generalemente cuando corre una aplicación en diferentes entornos de desarrollo y de producción puede experimentar diversos errores. Si estas desarrollando en Windows y desplegando en Linux (u otro sistema distinto a Windows) entonces es recomendable considerar el uso de una [Maquina Virtual](/#virtualization_title).
 
-Chris Tankersley tiene un post en su blog de mucha ayuda sobre cuales herramientas el usa para hacer [Desarrollos PHP usando Windows][windows-tools].
+Chris Tankersley tiene un post de mucha ayuda sobre cuales herramientas usa para hacer [Desarrollos PHP usando Windows][windows-tools].
 
 [easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/
