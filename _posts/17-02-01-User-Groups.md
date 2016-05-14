@@ -15,7 +15,7 @@ Deben recibir menciones especiales dos grupos de usuarios globales: [NomadPHP] y
 por mes conferencias en línea con presentaciones de algunos de los mejores oradores de la comunidad PHP. [PHPWomen] es
 un grupo de usuario no exclusivo originalmente enfocado hacia las mujeres dentro del mundo de PHP. La membresía está
 abierta a todo aquel que apoye una comunidad más diversa. [PHPWomen] ofrece una red de soporte, mentoría y educación, y
-generalmente promueve la creación de entornos profesionales "amigables con las mujeres".
+generalmente promueve la creación de entornos profesionales feministas.
 
 [Lea más sobre grupos de usuarios en la PHP Wiki][php-wiki]
 
