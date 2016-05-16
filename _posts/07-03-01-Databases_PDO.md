@@ -46,6 +46,8 @@ $stmt->execute();
 
 Ese es el código correcto. Se usa un parámetro vinculado (bound parameter) en una declaración PDO. Esto escapa la entrada externa ID antes de que esta sea introducida a la base de datos, previendo posibles ataques de SQL Injection.
 
+Para escrituras, como INSERT o UPDATE, aún es especialmente crítico [filtrar los datos](#data_filtering) primero y sanear cualesquiera otras cosas (eliminación de las etiquetas HTML, JavaScript, etc.). PDO sólo limpia el SQL, no su aplicación.
+
 * [Aprenda más sobre PDO]
 
 Debe tomar en cuenta que las conexiones de bases de datos usan recursos. Anteriormente no era extraño agotar los recursos del sistema si las conexiones no eran cerradas explícitamente, sin embargo, esto era más común en otros lenguajes. Usando PDO puede cerrar las conexiones explícitamente destruyendo el objeto, garantizando así que todas las referencias restantes se eliminan, p.e. asignándole un valor `null` al objeto PDO. Si no lo hace de manera explícita, automáticamente PHP cerrará la conexión cuando su script finalice - a menos claro, que esté usando conexiones persistentes.
