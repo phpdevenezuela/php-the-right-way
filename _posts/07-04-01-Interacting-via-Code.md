@@ -1,73 +1,68 @@
 ---
 isChild: true
 title:   Interactuando con Bases de Datos
-anchor:  databases_interacting
+anchor:  interactuando-con-bases-de-datos
 ---
 
-## Interacting with Databases {#databases_interacting_title}
+## Interactuando con Bases de Datos {#interactuando-con-bases-de-datos}
 
-When developers first start to learn PHP, they often end up mixing their database interaction up with their
-presentation logic, using code that might look like this:
+Cuando los desarrolladores empiezan a aprender PHP, a menudo terminan mezclando la interacción con la base de datos con su lógica de presentación, usando código que podría tener este aspecto:
 
 {% highlight php %}
 <ul>
 <?php
-foreach ($db->query('SELECT * FROM table') as $row) {
-    echo "<li>".$row['field1']." - ".$row['field1']."</li>";
+foreach ($db->query('SELECT * FROM tabla') as $fila) {
+    echo "<li>".$fila['campo1']." - ".$fila['campo1']."</li>";
 }
 ?>
 </ul>
 {% endhighlight %}
 
-This is bad practice for all sorts of reasons, mainly that its hard to debug, hard to test, hard to read and it is
-going to output a lot of fields if you don't put a limit on there.
+Esta es una mala práctica por muchas razones, principalmente, porque es difícil de depurar, difícil de poner a prueba, difícil de leer y que va a generar una gran cantidad de campos si usted no pone un límite.
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or
-[functional programming](/#functional-programming) - there must be some element of separation.
+Si bien hay muchas maneras de resolver esto - dependiendo de si prefiere [POO](/#object-oriented-programming) o [programación funcional](/#functional-programming) -, debe haber un elemento de separación.
 
-Consider the most basic step:
+Considere el modo más sencillo:
 
 {% highlight php %}
 <?php
-function getAllFoos($db) {
-    return $db->query('SELECT * FROM table');
+function cogerTodosLosFoos($db) {
+    return $db->query('SELECT * FROM tabla');
 }
 
-foreach (getAllFoos($db) as $row) {
-    echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
+foreach (cogerTodosLosFoos($db) as $fila) {
+    echo "<li>".$fila['campo1']." - ".$fila['campo1']."</li>"; // ¡¡ERROR!!
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean separation.
+Ese es un buen comienzo. Ponga esos dos elementos en dos archivos diferentes y tendrá una separación más clara.
 
-Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
-logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
-[frameworks](/#frameworks).
+Cree una clase y coloque ese método dentro y tendrá un "Modelo". Cree un simple archivo `.php` para colocar la lógica de presentación y tendrá una "Vista", todo eso le acercará mucho a [MVC] - una arquitectura común de la POO en muchos [frameworks](/#frameworks).
 
 **foo.php**
 
 {% highlight php %}
 <?php
-$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+$db = new PDO('mysql:host=localhost;dbname=bdprueba;charset=utf8', 'usuario', 'contraseña');
 
-// Make your model available
-include 'models/FooModel.php';
+// De acceso a su modelo
+include 'modelos/ModeloFoo.php';
 
-// Create an instance
-$fooModel = new FooModel($db);
-// Get the list of Foos
-$fooList = $fooModel->getAllFoos();
+// Cree una instancia
+$modeloFoo = new ModeloFoo($db);
+// Obtenga la lista de los Foos
+$listaFoo = $modeloFoo->cogerTodosLosFoos();
 
-// Show the view
-include 'views/foo-list.php';
+// Muestre la vista
+include 'vistas/lista-foo.php';
 {% endhighlight %}
 
 
-**models/FooModel.php**
+**modelos/ModeloFoo.php**
 
 {% highlight php %}
 <?php
-class FooModel
+class ModeloFoo
 {
     protected $db;
 
@@ -76,26 +71,23 @@ class FooModel
         $this->db = $db;
     }
 
-    public function getAllFoos() {
-        return $this->db->query('SELECT * FROM table');
+    public function cogerTodosLosFoos() {
+        return $this->db->query('SELECT * FROM tabla');
     }
 }
 {% endhighlight %}
 
-**views/foo-list.php**
+**vistas/foo-lista.php**
 
 {% highlight php %}
-<?php foreach ($fooList as $row): ?>
-    <?= $row['field1'] ?> - <?= $row['field1'] ?>
+<?php foreach ($listaFoo as $fila): ?>
+    <?= $fila['campo1'] ?> - <?= $fila['campo1'] ?>
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
-need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
-real problem if you ever want to [unit-test](/#unit-testing) your application.
+Esto es, esencialmente, lo mismo que hacen la mayoría de los frameworks modernos, pero un poco más artesanal. Puede que no tenga que hacer esto constantemente, pero mezclar la lógica de presentación y la interacción con la base de datos puede ser un verdadero problema si necesita hacer [pruebas unitarias](/#unit-testing) a su aplicación.
 
-[PHPBridge] has a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
-developers just getting used to the concept of interacting with databases.
+[PHPBridge] tiene un gran recurso llamado [Creando una clase Data - _Creating a Data Class_] que cubre un tema parecido, y es ideal para desarrolladores que desean habituarse a usar el concepto de interacción con bases de datos.
 
 
 [MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
