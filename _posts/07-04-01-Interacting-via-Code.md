@@ -11,14 +11,14 @@ Cuando los desarrolladores empiezan a aprender PHP, a menudo terminan mezclando 
 {% highlight php %}
 <ul>
 <?php
-foreach ($db->query('SELECT * FROM tabla') as $fila) {
+foreach ($bd->query('SELECT * FROM tabla') as $fila) {
     echo "<li>".$fila['campo1']." - ".$fila['campo1']."</li>";
 }
 ?>
 </ul>
 {% endhighlight %}
 
-Esta es una mala práctica por muchas razones, principalmente, porque es difícil de depurar, difícil de poner a prueba, difícil de leer y que va a generar una gran cantidad de campos si usted no pone un límite.
+Esta es una mala práctica por muchas razones, principalmente, porque es difícil de depurar, difícil de poner a prueba, difícil de leer y que va a generar una gran cantidad de campos si se ponen límites.
 
 Si bien hay muchas maneras de resolver esto - dependiendo de si prefiere [POO](/#object-oriented-programming) o [programación funcional](/#functional-programming) -, debe haber un elemento de separación.
 
@@ -26,11 +26,11 @@ Considere el modo más sencillo:
 
 {% highlight php %}
 <?php
-function cogerTodosLosFoos($db) {
-    return $db->query('SELECT * FROM tabla');
+function cogerTodosLosFoos($bd) {
+    return $bd->query('SELECT * FROM tabla');
 }
 
-foreach (cogerTodosLosFoos($db) as $fila) {
+foreach (cogerTodosLosFoos($bd) as $fila) {
     echo "<li>".$fila['campo1']." - ".$fila['campo1']."</li>"; // ¡¡ERROR!!
 }
 {% endhighlight %}
@@ -43,13 +43,13 @@ Cree una clase y coloque ese método dentro y tendrá un "Modelo". Cree un simpl
 
 {% highlight php %}
 <?php
-$db = new PDO('mysql:host=localhost;dbname=bdprueba;charset=utf8', 'usuario', 'contraseña');
+$bd = new PDO('mysql:host=localhost;dbname=bdprueba;charset=utf8', 'usuario', 'contraseña');
 
 // De acceso a su modelo
 include 'modelos/ModeloFoo.php';
 
 // Cree una instancia
-$modeloFoo = new ModeloFoo($db);
+$modeloFoo = new ModeloFoo($bd);
 // Obtenga la lista de los Foos
 $listaFoo = $modeloFoo->cogerTodosLosFoos();
 
@@ -64,11 +64,11 @@ include 'vistas/lista-foo.php';
 <?php
 class ModeloFoo
 {
-    protected $db;
+    protected $bd;
 
-    public function __construct(PDO $db)
+    public function __construct(PDO $bd)
     {
-        $this->db = $db;
+        $this->db = $bd;
     }
 
     public function cogerTodosLosFoos() {
@@ -85,7 +85,7 @@ class ModeloFoo
 <?php endforeach ?>
 {% endhighlight %}
 
-Esto es, esencialmente, lo mismo que hacen la mayoría de los frameworks modernos, pero un poco más artesanal. Puede que no tenga que hacer esto constantemente, pero mezclar la lógica de presentación y la interacción con la base de datos puede ser un verdadero problema si necesita hacer [pruebas unitarias](/#unit-testing) a su aplicación.
+Esto es, esencialmente, lo mismo que hacen la mayoría de los frameworks modernos, pero un poco más artesanal. Puede que no tenga que hacerlo constantemente, pero mezclar la lógica de presentación y la interacción con la base de datos puede ser un verdadero problema si necesita hacer [pruebas unitarias](/#unit-testing) a su aplicación.
 
 [PHPBridge] tiene un gran recurso llamado [Creando una clase Data - _Creating a Data Class_] que cubre un tema parecido, y es ideal para desarrolladores que desean habituarse a usar el concepto de interacción con bases de datos.
 
