@@ -1,51 +1,45 @@
 ---
-title:   Plantillas con PHP Plano
+title:   Plantillas con PHP plano
 isChild: true
 anchor:  plain_php_templates
 ---
 
-## Plain PHP Templates {#plain_php_templates_title}
+## Plantillas con PHP plano {#plain_php_templates_title}
 
-Plain PHP templates are simply templates that use native PHP code. They are a natural choice since PHP is actually a
-template language itself. That simply means that you can combine PHP code within other code, like HTML. This is
-beneficial to PHP developers as there is no new syntax to learn, they know the functions available to them, and their
-code editors already have PHP syntax highlighting and auto-completion built-in. Further, plain PHP templates tend to be
-very fast as no compiling stage is required.
+Las plantillas con PHP plano son simplemente archivos de texto que usan código PHP nativo. Es la opción más utilizada ya que PHP en realidad es un lenguaje propio para plantillas. Tan simple como que puedes combinar código PHP dentro de cualquier otro tipo de código como por ejemplo HTML. El uso de este tipo de plantillas es un beneficio para los desarrolladores PHP ya que no es necesario aprender un nueva sintaxis para la creación de plantillas, conocería las funciones disponibles y en los editores de texto cuentan con resaltado de sintaxis y autocompletado incorporado. Además, las plantillas planas PHP tienden a ser muy rápidas ya que no necesitan proceso de compilación.
 
-Every modern PHP framework employs some kind of template system, most of which use plain PHP by default. Outside of
-frameworks, libraries like [Plates][plates] or [Aura.View][aura] make working with plain PHP templates easier by
-offering modern template functionality such as inheritance, layouts and extensions.
+Cada framework de PHP moderno emplea algún tipo de sistema de plantilla, la mayoría de los cuales usan PHP plano por defecto. Más allá de los frameworks, librerías como [Plates][plates] or [Aura.View][aura] facilitan el trabajo con plantillas planas PHP pero ofreciendo funcionalidades de sistemas modernos de plantillas como lo son la herencia, layouts y extensiones.
 
-### Simple example of a plain PHP template
+### Un simple ejemplo del uso de plantillas con PHP plano
 
-Using the [Plates][plates] library.
+Usando la librería [Plates][plates].
 
 {% highlight php %}
-<?php // user_profile.php ?>
+<?php // perfil_usuario.php ?>
 
-<?php $this->insert('header', ['title' => 'User Profile']) ?>
+<?php $this->insert('cabecera', ['titulo' => 'Perfil del Usuario']) ?>
 
-<h1>User Profile</h1>
-<p>Hello, <?=$this->escape($name)?></p>
+<h1>Perfil del Usuario</h1>
+<p>Hola, <?=$this->escape($nombre)?></p>
 
-<?php $this->insert('footer') ?>
+<?php $this->insert('pie_de_pagina') ?>
 {% endhighlight %}
 
-### Example of plain PHP templates using inheritance
+### Ejemplo del uso de plantillas planas PHP con herencia.
 
-Using the [Plates][plates] library.
+Usando la librería [Plates][plates].
 
 {% highlight php %}
-<?php // template.php ?>
+<?php // plantilla.php ?>
 
 <html>
 <head>
-    <title><?=$title?></title>
+    <title><?=$titulo?></title>
 </head>
 <body>
 
 <main>
-    <?=$this->section('content')?>
+    <?=$this->section('contenido')?>
 </main>
 
 </body>
@@ -53,12 +47,12 @@ Using the [Plates][plates] library.
 {% endhighlight %}
 
 {% highlight php %}
-<?php // user_profile.php ?>
+<?php // perfil_usuario.php ?>
 
-<?php $this->layout('template', ['title' => 'User Profile']) ?>
+<?php $this->layout('plantilla', ['titulo' => 'Perfil del Usuario']) ?>
 
-<h1>User Profile</h1>
-<p>Hello, <?=$this->escape($name)?></p>
+<h1>Perfil del Usuario</h1>
+<p>Hola, <?=$this->escape($nombre)?></p>
 {% endhighlight %}
 
 

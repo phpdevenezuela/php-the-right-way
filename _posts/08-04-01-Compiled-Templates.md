@@ -4,48 +4,43 @@ isChild: true
 anchor:  compiled_templates
 ---
 
-## Compiled Templates {#compiled_templates_title}
+## Plantillas Compiladas {#compiled_templates_title}
 
-While PHP has evolved into a mature, object oriented language, it [hasn't improved much][article_templating_engines] as
-a templating language. Compiled templates, like [Twig], [Brainy], or [Smarty]*, fill this void by offering a new syntax that has
-been geared specifically to templating. From automatic escaping, to inheritance and simplified control structures,
-compiled templates are designed to be easier to write, cleaner to read and safer to use. Compiled templates can even be
-shared across different languages, [Mustache] being a good example of this. Since these templates must be compiled
-there is a slight performance hit, however this is very minimal when proper caching is used.
+Mientras que PHP se ha convertido en un lenguaje maduro, orientado a objetos entre muchas otras cosas, [no ha mejorado mucho] [article_templating_engines] como un lenguaje de plantillas. Motores de plantillas compiladas como [Twig], [Brainy], or [Smarty]* llenan este vacío ofreciendo nuevas sintaxis creadas específicamente para plantillas. Desde escapado automático pasando por herencia de plantillas hasta estructuras de control simplificadas, las plantillas compiladas están diseñadas para ser más fáciles de escribir, sencillas para leer y más seguras de usar. Las plantillas compiladas pueden ser incluso compartidas a través de diferentes lenguajes, [Mustache] es un buen ejemplo de esto. Debido a que este tipo de plantillas deben ser compiladas existe un ligero impacto en el rendimiento, sin embargo este impacto puede llegar a ser mínimo con el uso de un sistema de cache apropiado.
 
-**While Smarty offers automatic escaping, this feature is NOT enabled by default.*
+**Aunque Smarty ofrece escapado automático, esta característica NO está habilitada por defecto.*
 
-### Simple example of a compiled template
+### Un simple ejemplo del uso de plantillas compiladas
 
-Using the [Twig] library.
+Usando la librería [Twig].
 
 {% highlight html+jinja %}
 {% raw %}
-{% include 'header.html' with {'title': 'User Profile'} %}
+{% include 'cabecera.html' with {'titulo': 'Perfil del Usuario'} %}
 
-<h1>User Profile</h1>
-<p>Hello, {{ name }}</p>
+<h1>Perfil del Usuario</h1>
+<p>Hola, {{ nombre }}</p>
 
-{% include 'footer.html' %}
+{% include 'pie_de_pagina.html' %}
 {% endraw %}
 {% endhighlight %}
 
-### Example of compiled templates using inheritance
+### Ejemplo del uso de plantillas compiladas usando herencia
 
-Using the [Twig] library.
+Usando la librería [Twig].
 
 {% highlight html+jinja %}
 {% raw %}
-// template.html
+// plantilla.html
 
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block titulo %}{% endblock %}</title>
 </head>
 <body>
 
 <main>
-    {% block content %}{% endblock %}
+    {% block contenido %}{% endblock %}
 </main>
 
 </body>
@@ -55,14 +50,14 @@ Using the [Twig] library.
 
 {% highlight html+jinja %}
 {% raw %}
-// user_profile.html
+// perfil_usuario.html
 
-{% extends "template.html" %}
+{% extends "plantilla.html" %}
 
-{% block title %}User Profile{% endblock %}
-{% block content %}
-    <h1>User Profile</h1>
-    <p>Hello, {{ name }}</p>
+{% block titulo %}Perfil del Usuario{% endblock %}
+{% block contenido %}
+    <h1>Perfil del Usuario</h1>
+    <p>Hola, {{ nombre }}</p>
 {% endblock %}
 {% endraw %}
 {% endhighlight %}

@@ -3,9 +3,8 @@ title:  Plantillas
 anchor: templating
 ---
 
-# Templating {#templating_title}
+# Plantillas {#templating_title}
 
-Templates provide a convenient way of separating your controller and domain logic from your presentation logic.
-Templates typically contain the HTML of your application, but may also be used for other formats, such as XML.
-Templates are often referred to as "views", which make up **part of** the second component of the
-[model–view–controller](/pages/Design-Patterns.html#model-view-controller) (MVC) software architecture pattern.
+Las plantillas proveen una forma muy conveniente de separar la lógica del controlador y el modelo de la lógica de presentación.
+Las plantillas normalmente contienen el código HTML de la aplicación, pero también pueden ser usadas para otros formatos de salida como por ejemplo XML.
+Las plantillas a menudo son denominadas como "vistas", conformando **una parte** del segundo componente en el patrón de diseño de software [modelo–vista–controlador](/pages/Design-Patterns.html#model-view-controller) (MVC por sus siglas en inglés).
