@@ -25,16 +25,16 @@ MacPorts es compatible con binarios pre-compilados, por tanto no necesitas recom
 
 En este punto, puedes instalar 'php54', 'php55', 'php56' o 'php70' usando el comando 'port install', por ejemplo:
 
-sudo port install php56
-sudo port install php70
+    sudo port install php56
+    sudo port install php70
 
 Y puedes correr el comando 'select' para cambiar tu versión de PHP activa:
 
-sudo port select --set php php70
+    sudo port select --set php php70
 
 ### Instalar PHP via phpbrew
 
-[phpbrew] es una herramienta para la instalación y administración de múltiples versiones de PHP. Esto puede ser de mucha utilidad si tienes dos diferentes aplicaciones y/o proyectos que requieran versiones diferentes de PHP, y no este usando máquinas virtuales.
+[phpbrew] Es una herramienta para la instalación y administración de múltiples versiones de PHP. Esto puede ser de mucha utilidad si tienes dos aplicaciones y/o proyectos diferentes que requieran versiones diferentes de PHP, y no este usando máquinas virtuales.
 
 ### Instalar PHP vía Instalador Binario de Liip
 
@@ -44,7 +44,7 @@ Esto no sobrescribirá los binarios de PHP instalados por Apple, sino que instal
 ### Compilar desde la Fuente
 
 Otra opción que le da el control sobre la versión de PHP que va a instalar, es [compilarla usted mismo][mac-compile].
-En ese caso asegúrese de tener instalado [Xcode][xcode-gcc-substitution] o un Sustituto ["Herramientas de Linea de Comandos para XCode"] de Apple que se encuentre disponible para la descarga desde el Centro de Desarrolladores de Apple (Apple's Mac Developer Center).
+En ese caso asegúrese de tener instalado [Xcode][xcode-gcc-substitution] o un Sustituto ["Herramientas de Linea de Comandos para XCode"]["Command Line Tools for XCode"] de Apple que se encuentre disponible para la descarga desde el Centro de Desarrolladores de Apple (Apple's Mac Developer Center).
 
 ### Instaladores Todo-en-Uno
 
