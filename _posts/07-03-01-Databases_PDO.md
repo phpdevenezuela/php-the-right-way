@@ -1,77 +1,66 @@
 ---
 isChild: true
 title:   Extensión PDO
-anchor:  pdo_extension
+anchor:  extension-pdo
 ---
 
-## PDO Extension {#pdo_extension_title}
+## Extensión PDO {#extension-pdo}
 
-[PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common
-interface to talk with many different databases. For example, you can use basically identical code to interface with
-MySQL or SQLite:
+[PDO] es una librería para la abstracción de conexiones a bases de datos &mdash; fue incluida dentro de PHP a partir de la versión 5.1.0 &mdash; y provee una interfaz común para comunicarse con diferentes bases de datos. Por ejemplo, puede usarla de manera idéntica para escribir la interfaz de comunicación con MySQL o SQLite:
 
 {% highlight php %}
-<?php
 // PDO + MySQL
-$pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
-$statement = $pdo->query("SELECT some_field FROM some_table");
-$row = $statement->fetch(PDO::FETCH_ASSOC);
-echo htmlentities($row['some_field']);
+$pdo = new PDO('mysql:host=ejemplo.com;dbname=basededatos', 'usuario', 'contraseña');
+$sql = $pdo->query("SELECT algun_campo FROM alguna_tabla");
+$fila = $sql->fetch(PDO::FETCH_ASSOC);
+echo htmlentities($fila['algun_campo']);
 
 // PDO + SQLite
-$pdo = new PDO('sqlite:/path/db/foo.sqlite');
-$statement = $pdo->query("SELECT some_field FROM some_table");
-$row = $statement->fetch(PDO::FETCH_ASSOC);
-echo htmlentities($row['some_field']);
+$pdo = new PDO('sqlite:/path/db/basededatos.sqlite');
+$sql = $pdo->query("SELECT algun_campo FROM alguna_tabla");
+$fila = $sql->fetch(PDO::FETCH_ASSOC);
+echo htmlentities($fila['algun_campo']);
 {% endhighlight %}
 
-PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types of
-database with the same API.
+PDO NO traducirá sus consultas SQL y tampoco emulará características ausentes; PDO sólo se conecta con múltiples tipos de bases de datos usando la misma API.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying
-about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+Más importante aún, `PDO` le permitirá inyectar entradas externas de manera segura en sus sentencias SQL (p.e. IDs), sin tener que preocuparse por los ataques de inyección SQL (SQL injection).
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record
-from a database. This is the `wrong` way to do this:
+Esto es posible gracias al uso de las declaraciones (statements) y parámetros vinculados (bound parameters) de PDO.
+
+Supongamos que un script PHP recibe un ID numérico como un parámetro de una consulta. Este ID se usará para buscar un registro de usuario en una base de datos. Esta es la manera `incorrecta` de hacer esto:
 
 {% highlight php %}
-<?php
 $pdo = new PDO('sqlite:/path/db/users.db');
-$pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
+$pdo->query("SELECT nombre FROM usuarios WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat, using a practice called [SQL Injection]. Just imagine if a hacker passes in an inventive `id` parameter by
-calling a URL like `http://domain.com/?id=1%3BDELETE+FROM+users`. This will set the `$_GET['id']` variable to `1;DELETE
-FROM users` which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+Ese es un código terrible. Al hacerlo, estaría insertando un parámetro _crudo_ en su sentencia SQL. Hacerlo significaría que podrían hackearle más rápido que inmediatamente, usando una técnica llamada [SQL Injection](http://wiki.hashphp.org/Validation). Sólo imagine que un hacker pase un parámetro inventado `id` llamando a una URL como `http://dominio.com/?id=1%3BDELETE+FROM+usuarios`. Esto le asignaría el valor `1;DELETE FROM users` a la variable global `$_GET['id']` ¡lo cual borraría todos los registros de su tabla `usuarios`! Para evitarlo, debe _desinfectar_ la entrada ID usando parámetros vinculados (bound parameters).
 
 {% highlight php %}
-<?php
 $pdo = new PDO('sqlite:/path/db/users.db');
-$stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT); // <-- filter your data first (see [Data Filtering](#data_filtering)), especially important for INSERT, UPDATE, etc.
-$stmt->bindParam(':id', $id, PDO::PARAM_INT); // <-- Automatically sanitized for SQL by PDO
+$stmt = $pdo->prepare('SELECT nombre FROM usuarios WHERE id = :id');
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Desinfectado automáticamente por PDO
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is
-introduced to the database preventing potential SQL injection attacks.
+Ese es el código correcto. Se usa un parámetro vinculado (bound parameter) en una declaración PDO. Esto escapa la entrada externa ID antes de que esta sea introducida a la base de datos, previendo posibles ataques de SQL Injection.
 
-For writes, such as INSERT or UPDATE, it's especially critical to still [filter your data](#data_filtering) first and sanitize it for other things (removal of HTML tags, JavaScript, etc).  PDO will only sanitize it for SQL, not for your application.
+Para escrituras, como INSERT o UPDATE, aún es especialmente crítico [filtrar los datos](#data_filtering) primero y sanear cualesquiera otras cosas (eliminación de las etiquetas HTML, JavaScript, etc.). PDO sólo limpia el SQL, no su aplicación.
 
-* [Learn about PDO]
+* [Aprenda más sobre PDO]
 
-You should also be aware that database connections use up resources and it was not unheard-of to have resources
-exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you can
-implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted, i.e.
-set to NULL. If you don't do this explicitly, PHP will automatically close the connection when your script ends -
-unless of course you are using persistent connections.
+Debe tomar en cuenta que las conexiones de bases de datos usan recursos. Anteriormente no era extraño agotar los recursos del sistema si las conexiones no eran cerradas explícitamente, sin embargo, esto era más común en otros lenguajes. Usando PDO puede cerrar las conexiones explícitamente destruyendo el objeto, garantizando así que todas las referencias restantes se eliminan, p.e. asignándole un valor `null` al objeto PDO. Si no lo hace de manera explícita, automáticamente PHP cerrará la conexión cuando su script finalice - a menos claro, que esté usando conexiones persistentes.
 
-* [Learn about PDO connections]
+* [Aprenda acerca de conexiones PDO]
 
+[Objetos de datos de PHP]: http://www.php.net/manual/es/book.pdo.php
+[Conexiones y su administración]: http://php.net/manual/es/pdo.connections.php
+[Características obsoletas en PHP 5.5.x]: http://php.net/manual/es/migration55.deprecated.php
+[SQL Injection]: http://wiki.hashphp.org/Validation
 
 [pdo]: http://php.net/pdo
-[SQL Injection]: http://wiki.hashphp.org/Validation
-[Learn about PDO]: http://php.net/book.pdo
-[Learn about PDO connections]: http://php.net/pdo.connections
+[mysql]: http://php.net/mysql
+[mysqli]: http://php.net/mysqli
+[pgsql]: http://php.net/pgsql
+[mssql]: http://php.net/mssql

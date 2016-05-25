@@ -1,18 +1,13 @@
 ---
 title:  Bases de Datos
-anchor: databases
+anchor: bases-de-datos
 ---
 
-# Databases {#databases_title}
+# Bases de Datos {#bases-de-datos}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql],
-[mssql], etc.
+En muchas ocasiones su código PHP usará una base de datos para mantener información. Usted tiene varias opciones para conectarse e interactuar con su base de datos. La opción recomendada **hasta la versión 5.1.0 de PHP** era usar controladores nativos tales como [mysqli], [pgsql] o [mssql].
 
-Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
-MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the
-same drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
-
+Los controladores nativos son excelentes si solo usa _una_ base de datos en su aplicación, pero si, por ejemplo, está usando MySQL y una pequeña porción de MSSQL, o si necesita conectarse a una base de datos Oracle, entonces no podría usar los mismos controladores. Usted necesitaría aprender a manipular una nueva API por cada base de datos &mdash; y eso sería absurdo.
 
 [mysqli]: http://php.net/mysqli
 [pgsql]: http://php.net/pgsql
