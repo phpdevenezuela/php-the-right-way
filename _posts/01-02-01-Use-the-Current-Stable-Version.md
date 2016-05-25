@@ -4,12 +4,11 @@ isChild: true
 anchor:  use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (7.0) {#use_the_current_stable_version_title}
+# Usa la versión Estable Actual(7.0) {#use_the_current_stable_version_title}
 
-If you are getting started with PHP, start with the current stable release of [PHP 7.0][php-release]. PHP 7.0 is very
-new, and adds many amazing [new features](#language_highlights) over the older 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions.
+Si esta dando sus primeros pasos con PHP, es recomendable que comience con la versión estable actual de [PHP 7.0][php-release]. PHP 7.0 es muy nuevo, y agrega muchas [Nuevas Características](#language_highlights) increíbles en comparación con las antiguas versiones 5.x. Por ejemplo, el motor ha sido reescrito en gran parte, por consiguiente, PHP 7 es ahora mucho mas rápido que sus versiones anteriores.
 
-Most commonly in the near future you will find PHP 5.x being used, and the latest 5.x version is 5.6. This is not a bad option, but you should try to upgrade to the latest stable quickly. Upgrading is really quite easy, as there are not many [backwards compatibility breaks][php70-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+Será muy común que encuentre que PHP 5.x sigue siendo usado aún, siendo la versión 5.6 la mas reciente de la rama PHP 5.x. Lo cual no es una mala opción, pero es aconsejable actualizar a la versión estable mas reciente rápidamente. Dicha actualización es realmente muy fácil, debido a que no hay mayor [incompatibilidad con versiones anteriores][php70-bc]. Si no esta seguro de cual versión de una función o características esta usando, puedes revisar la documentación de PHP en el su sitio web [php.net][php-docs].
 
 [php-release]: http://php.net/downloads.php
 [php-docs]: http://php.net/manual/
