@@ -10,7 +10,7 @@ Con la versión de PHP 5.4 o más recientes, puede empezar a aprender PHP sin la
 Para iniciar el servidor integrado, se necesita correr el siguiente comando desde la terminal en la raíz de tu proyecto web:
 
 {% highlight console %}
-&gt; php -S localhost:8000
+-> php -S localhost:8000
 {% endhighlight %}
 
 * [Aprende sobre el Servidor Web Integrado][cli-server]
