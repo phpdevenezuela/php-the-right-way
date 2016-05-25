@@ -15,7 +15,7 @@ El desarrollo de [mysql] no sólo se detuvo hace mucho tiempo, sino que además 
 
 Para evitar el tener que excavar en las configuraciones de su `php.ini` para saber qué módulo está usando, una opción es buscar `mysql_*` en el editor de su preferencia. Si cualquier función tal como `mysql_connect()` o `mysql_query()` son encontradas en esa búsqueda, entonces `mysql` está siendo usada.
 
-Incluso si no está usando PHP 7.0 aún, no tener en cuenta esta actualización tan pronto como sea posible dará lugar a una mayores problemas cuando la actualización 7.0 de PHP esté cercana. Así pues, su mejor opción será reemplazar el uso de la extensión [mysql] en sus aplicaciones, sustituyéndola por las extensiones [mysqli] o [pdo]. Empiece a planificar esos cambios dentro de sus cronogramas de desarrollo y así evitará tener que hacer las cosas a toda prisa.
+Incluso si no está usando PHP 7.0 aún, no tener en cuenta esta actualización tan pronto como sea posible dará lugar a unos mayores problemas cuando la actualización 7.0 de PHP esté cercana. Así pues, su mejor opción será reemplazar el uso de la extensión [mysql] en sus aplicaciones, sustituyéndola por las extensiones [mysqli] o [pdo]. Empiece a planificar esos cambios dentro de sus cronogramas de desarrollo y así evitará tener que hacer las cosas a toda prisa.
 
 **Si se está actualizando desde [mysql] a [mysqli], tenga cuidado con las guías de actualización para flojos que sugieren que puede simplemente buscar y reemplazar `mysql_*` con `mysqli_*`. Eso no sólo es que una burda simplificación, sino que además no toma en cuenta las ventajas que ofrece al mysqli, tales como parámetros vinculados (bound parameters), que también se ofrece en [PDO][pdo].**
 
