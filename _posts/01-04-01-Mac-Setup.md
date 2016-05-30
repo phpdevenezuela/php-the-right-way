@@ -1,10 +1,10 @@
 ---
 title:   Configuración en MAC
 isChild: true
-anchor:  mac_setup
+anchor:  configuracion_en_mac
 ---
 
-## Configuración en MAC {#mac_setup_title}
+## Configuración en MAC {#configuracion_en_mac_title}
 
 OS X viene con PHP preempaquetado pero normalmente se encuentra en versiones anteriores a la versión estable actual. El sistema "Mavericks" viene con PHP 5.4.17 configurado, "Yosemite" con PHP 5.5.9 y "El Capitan" tiene PHP 5.5.29, pero tras la liberación de PHP 7.0 estas configuraciones no suelen ser suficientes.
 
@@ -15,7 +15,7 @@ Hay múltiples maneras de instalar PHP en OS X.
 [Homebrew] es un poderoso manejador de paquetes para OS X, él cual puede ayudarle a instalar PHP y varias extensiones fácilmente.
 [Homebrew PHP] es un repositorio que contiene "fórmulas" para instalar y manejar PHP con Homebrew.
 
-En este punto, puedes instalar 'php53', 'php54', 'php55', 'php56' o 'php70' usando el comando 'brew install', y cambiar entre ellas modificando la variable 'PATH'. Alternativamente puede usar [brew-php-switcher][brew-php-switcher] el cual alternará automáticamente por ti.
+En este punto, puedes instalar `php53`, `php54`, `php55`, `php56` o `php70` usando el comando `brew install`, y cambiar entre ellas modificando la variable `PATH`. Alternativamente puede usar [brew-php-switcher][brew-php-switcher] el cual alternará automáticamente por ti.
 
 ### Instalar PHP vía Macports
 
@@ -23,12 +23,12 @@ El Proyecto [MacPorts] es una iniciativa de comunidad open-source para diseñar 
 
 MacPorts es compatible con binarios pre-compilados, por tanto no necesitas recompilar cada dependencia de los archivos tarball desde la fuente, ahorrándole futuros problemas si no tiene ningún paquete necesario instalado en su sistema.
 
-En este punto, puedes instalar 'php54', 'php55', 'php56' o 'php70' usando el comando 'port install', por ejemplo:
+En este punto, puedes instalar `php54`, `php55`, `php56` o `php70` usando el comando `port install`, por ejemplo:
 
     sudo port install php56
     sudo port install php70
 
-Y puedes correr el comando 'select' para cambiar tu versión de PHP activa:
+Y puedes correr el comando `select` para cambiar tu versión de PHP activa:
 
     sudo port select --set php php70
 
