@@ -1,18 +1,19 @@
 ---
-title:   Librería Estándar de PHP
+title:   Librería Estándar de PHP (SPL)
 isChild: true
-anchor:  standard_php_library
+anchor:  libreria_estandar_de_php
 ---
 
-## Standard PHP Library {#standard_php_library_title}
+## Librería Estándar de PHP (SPL) {#libreria_estandar_de_php_title}
 
-The Standard PHP Library (SPL) is packaged with PHP and provides a collection of classes and interfaces. It is made up
-primarily of commonly needed datastructure classes (stack, queue, heap, and so on), and iterators which can traverse
-over these datastructures or your own classes which implement SPL interfaces.
+La Librería Estándar de PHP (SPL, por sus siglas en inglés) viene empaquetada con PHP y provee una colección de clases e interfaces. Compuesta principalmente de clases de estructura de datos (como [stack][stack], [queue][queue] y [heap][heap]) e [iteradores][iterators] que pueden atravesar estas estructuras de datos o sus propias clases que implementen las interfaces de la SPL.
 
-* [Read about the SPL][spl]
-* [SPL video course on Lynda.com(Paid)][spllynda]
+* [Leer acerca de SPL][spl]
+* [Un Video Tutorial de SPL en Lynda.com (Pago)][spllynda]
 
-
-[spl]: http://php.net/book.spl
+[spl]: http://php.net/es/book.spl
 [spllynda]: http://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[stack]: http://php.net/manual/es/class.splstack.php
+[queue]: http://php.net/manual/es/class.splqueue.php
+[heap]: http://php.net/manual/es/class.splheap.php
+[iterators]: http://php.net/manual/es/spl.iterators.php
