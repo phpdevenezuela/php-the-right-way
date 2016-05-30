@@ -1,10 +1,10 @@
 ---
 title:   Configuración en Windows
 isChild: true
-anchor:  windows_setup
+anchor:  configuracion_en_windows
 ---
 
-## Configuración en Windows {#windows_setup_title}
+## Configuración en Windows {#configuracion_en_windows_title}
 
 Puede descargar los binarios desde [windows.php.net/download][php-downloads]. Después de extraer los archivos de PHP, es recomendable agregar el [PATH][windows-path] a la raíz de tu directorio PHP (Donde esta localizado php.exe) para que pueda ejecutar PHP desde cualquier lugar de su sistema.
 
