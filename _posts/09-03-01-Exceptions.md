@@ -1,10 +1,10 @@
 ---
 title:   Excepciones
 isChild: true
-anchor:  exceptions
+anchor:  excepciones
 ---
 
-## Excepciones {#exceptions_title}
+## Excepciones {#excepciones_title}
 
 Las Excepciones son una parte estándar de los lenguajes de programación mas populares, pero frecuentemente son pasados por alto por programadores PHP. Lenguajes como Ruby son extremadamente estrictos en el manejo de Excepciones, por lo que cada vez que algo va mal como una petición HTTP fallida, o una consulta a la DB esta equivocada, o incluso si un recurso como una imagen no puede ser encontrado, Ruby (o las gemas instaladas) arrojará una excepción en la pantalla para hacerle saber instantáneamente que hay un error.
 
