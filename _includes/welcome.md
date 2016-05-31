@@ -1,4 +1,4 @@
-# Welcome
+# ¡Bienvenido!
 
 Hay una gran cantidad de información no actualizada en la web que conduce a nuevos usuarios de PHP por mal camino,
 propaga las malas prácticas y código inseguro. _PHP: La Manera Correcta_ es una referencia práctica y fácil de entender,
