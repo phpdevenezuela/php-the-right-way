@@ -1,13 +1,16 @@
 ---
 title:   Cifrado de Contraseñas
 isChild: true
-anchor:  password_hashing
+anchor:  cifrado_de_contrasenas
 ---
 
-## Password Hashing {#password_hashing_title}
+## Cifrado de Contraseñas {#cifrado_de_contrasenas_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
-database and later used to authenticate users upon login.
+Eventualmente todos terminamos creando una aplicación PHP basada en la conexión de usuarios. Los nombres de usuarios y
+contraseñas son almacenados en la base de datos y usadas luego para autenticar a los usuarios conectados.
+
+Es muy importante que las contraseñas sean cifradas a través de una [función hash criptográfica][3] antes de almacenarlas.
+
 
 It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible, one
 way function performed against the user's password. This produces a fixed-length string that cannot be feasibly
@@ -39,13 +42,13 @@ if (password_verify('bad-password', $passwordHash)) {
 {% endhighlight %}
 
 
-* [Learn about `password_hash()`] [1]
+* [Leer acerca de `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
 * [Learn about hashing in regards to cryptography] [3]
 * [PHP `password_hash()` RFC] [4]
 
 
-[1]: http://php.net/function.password-hash
+[1]: http://php.net/es/function.password-hash
 [2]: https://github.com/ircmaxell/password_compat
-[3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
+[3]: https://es.wikipedia.org/wiki/Función_hash_criptográfica
 [4]: https://wiki.php.net/rfc/password_hash
