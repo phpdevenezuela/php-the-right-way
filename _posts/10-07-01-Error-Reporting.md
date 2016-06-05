@@ -1,10 +1,10 @@
 ---
 title:   Reporte de Errores
 isChild: true
-anchor:  error_reporting
+anchor:  reporte_de_errores
 ---
 
-## Error Reporting {#error_reporting_title}
+## Reporte de Errores {#reporte_de_errores_title}
 
 Error logging can be useful in finding the problem spots in your application, but it can also expose information about
 the structure of your application to the outside world. To effectively protect your application from issues that could
