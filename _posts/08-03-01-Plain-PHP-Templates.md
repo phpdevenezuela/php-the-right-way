@@ -1,10 +1,10 @@
 ---
 title:   Plantillas con PHP plano
 isChild: true
-anchor:  plain_php_templates
+anchor:  plantillas_con_php_plano
 ---
 
-## Plantillas con PHP plano {#plain_php_templates_title}
+## Plantillas con PHP plano {#plantillas_con_php_plano_title}
 
 Las plantillas con PHP plano son simplemente archivos de texto que usan código PHP nativo. Es la opción más utilizada ya que PHP en realidad es un lenguaje propio para plantillas. Tan simple como que puedes combinar código PHP dentro de cualquier otro tipo de código como por ejemplo HTML. El uso de este tipo de plantillas es un beneficio para los desarrolladores PHP ya que no es necesario aprender un nueva sintaxis para la creación de plantillas, conocería las funciones disponibles y en los editores de texto cuentan con resaltado de sintaxis y autocompletado incorporado. Además, las plantillas planas PHP tienden a ser muy rápidas ya que no necesitan proceso de compilación.
 

@@ -1,10 +1,10 @@
 ---
 isChild: true
 title:   Interactuando con Bases de Datos
-anchor:  interactuando-con-bases-de-datos
+anchor:  interactuando_con_bases_de_datos
 ---
 
-## Interactuando con Bases de Datos {#interactuando-con-bases-de-datos}
+## Interactuando con Bases de Datos {#interactuando_con_bases_de_datos_title}
 
 Cuando los desarrolladores empiezan a aprender PHP, a menudo terminan mezclando la interacción con la base de datos con su lógica de presentación, usando código que podría tener este aspecto:
 

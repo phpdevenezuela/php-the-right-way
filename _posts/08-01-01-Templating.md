@@ -1,9 +1,9 @@
 ---
 title:  Plantillas
-anchor: templating
+anchor: plantillas
 ---
 
-# Plantillas {#templating_title}
+# Plantillas {#plantillas_title}
 
 Las plantillas proveen una forma muy conveniente de separar la lógica del controlador y el modelo de la lógica de presentación.
 Las plantillas normalmente contienen el código HTML de la aplicación, pero también pueden ser usadas para otros formatos de salida como por ejemplo XML.

@@ -1,10 +1,10 @@
 ---
 isChild: true
 title:   Extensión MySQL
-anchor:  extension-mysql
+anchor:  extension_mysql
 ---
 
-## Extensión MySQL {#extension-mysql}
+## Extensión MySQL {#extension_mysql_title}
 
 La extensión [mysql] para PHP es extremadamente vieja y ha sido sustituida por dos nuevas extensiones:
 
