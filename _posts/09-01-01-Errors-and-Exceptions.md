@@ -1,7 +1,7 @@
 ---
 title:  Errores y Excepciones
-anchor: errors_and_exceptions
+anchor: errores_and_excepciones
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
+# Errores y Excepciones {#errores_and_excepciones_title}
 
