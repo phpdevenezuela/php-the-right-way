@@ -1,10 +1,10 @@
 ---
 title:   Lecturas Recomendadas
 isChild: true
-anchor:  templating_further_reading
+anchor:  lecturas_recomendadas
 ---
 
-## Lecturas Recomendadas {#templating_further_reading_title}
+## Lecturas Recomendadas {#lecturas_recomendadas_title}
 
 ### Artículos y Tutoriales
 

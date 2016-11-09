@@ -1,10 +1,10 @@
 ---
 isChild: true
 title:   Capas de Abstracción
-anchor:  capas-de-abstraccion
+anchor:  capas_de_abstraccion
 ---
 
-## Capas de Abstracción {#capas-de-abstraccion}
+## Capas de Abstracción {#capas_de_abstraccion_title}
 
 Muchos frameworks proveen sus propias capas de abstracción y estas pueden o no situarse por encima de [PDO][1]. Estos suelen emular características de un sistemas de bases de datos que no se encuentran en otro envolviendo sus consultas en métodos PHP, dándole la capa de abstracción de bases de datos real en vez de sólo la abstracción de conexión que provee PDO.
 

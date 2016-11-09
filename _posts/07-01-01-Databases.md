@@ -1,9 +1,9 @@
 ---
 title:  Bases de Datos
-anchor: bases-de-datos
+anchor: bases_de_datos
 ---
 
-# Bases de Datos {#bases-de-datos}
+# Bases de Datos {#bases_de_datos_title}
 
 En muchas ocasiones su código PHP usará una base de datos para mantener información. Usted tiene varias opciones para conectarse e interactuar con su base de datos. La opción recomendada **hasta la versión 5.1.0 de PHP** era usar controladores nativos tales como [mysqli], [pgsql] o [mssql].
 

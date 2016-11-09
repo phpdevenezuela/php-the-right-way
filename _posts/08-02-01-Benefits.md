@@ -1,10 +1,10 @@
 ---
 title:   Beneficios
 isChild: true
-anchor:  templating_benefits
+anchor:  beneficios_de_las_plantillas
 ---
 
-## Beneficios {#templating_benefits_title}
+## Beneficios {#beneficios_de_las_plantillas_title}
 
 El principal beneficio de usar plantillas es la clara separación que se crea entre la lógica de presentación y el resto de la aplicación. Las plantillas son las únicas responsables de mostrar el contenido con un formato. Las plantillas no son responsables en el proceso de consultas de datos, persistencia o alguna otra tarea compleja de este estilo. Esto conduce a un código más limpio y legible que es de especial ayuda en un entorno de desarrollo donde los programadores  trabajan en código que se ejecuta del lado del servidor (Modelos y Controladores) y los diseñadores trabajan en código que se mostrara del lado del cliente (Markup HTML, CSS, JS).
 
