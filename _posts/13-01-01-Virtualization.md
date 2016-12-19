@@ -1,15 +1,10 @@
 ---
 title:  Virtualización
-anchor: virtualization
+anchor: virtualizacion
 ---
 
-# Virtualization {#virtualization_title}
+# Virtualización {#virtualizacion_title}
 
-Running your application on different environments in development and production can lead to strange bugs popping up
-when you go live. It's also tricky to keep different development environments up to date with the same version for all
-libraries used when working with a team of developers.
+Ejecutar tu aplicación en diferentes entornos de desarrollo y producción puede generar la aparición de extraños bugs cuando el proyecto vea la luz pública. Además, se hace complicado mantener actualizados diferentes entornos de desarrollo con la misma versión de todas las librerías que se emplean al trabajar con un grupo de desarrolladores.
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you
-should consider using a virtual machine. This sounds tricky, but besides the widely known virtualization environments
-like VMware or VirtualBox, there are additional tools that may help you setting up a virtual environment in a few easy
-steps.
+Tanto si estas desarrollando en Windows y desplegando tu aplicación en Linux (u otro O.S. no Windows) como si formas parte de un equipo de desarrollo, entonces deberías considerar emplear *entornos virtualizados*. Puede que esto suene complicado, sin embargo, más allá de los conocidos sistemas de virtualización como VMware o VirtualBox, también podemos encontrar herramientas que nos ayudan a configurar rápidamente un entorno virtual personalizado para comenzar con nuestros proyectos en PHP.
