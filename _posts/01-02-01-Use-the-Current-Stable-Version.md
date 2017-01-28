@@ -1,15 +1,15 @@
 ---
-title:   Use la última versión estable (7.0)
+title: Use la última versión estable (7.1)
 isChild: true
-anchor:  use_la_ultima_version_estable
+anchor: use_la_ultima_version_estable
 ---
 
-## Usa la versión Estable Actual (7.0) {#use_la_ultima_version_estable_title}
+## Use la Versión Estable Actual (7.1) {#use_la_ultima_version_estable_title}
 
-Si esta dando sus primeros pasos con PHP, es recomendable que comience con la versión estable actual de [PHP 7.0][php-release]. PHP 7.0 es muy nuevo, y agrega muchas [Nuevas Características](#aspectos_destacados_del_lenguaje) increíbles en comparación con las antiguas versiones 5.x. Por ejemplo, el motor ha sido reescrito en gran parte, por consiguiente, PHP 7 es ahora mucho mas rápido que sus versiones anteriores.
+Si está dando sus primeros pasos con PHP comience con la versión estable actual (current stable) de [PHP 7.1][php-release]. PHP 7.1 es muy nuevo y agrega [muchas e interesantes caracteristicas](#language_highlights) en comparación con las antiguas versiones 5.x. El motor ha sido reescrito en gran parte y en consecuencia PHP es ahora más rápido que las versiones antiguas.
 
-Será muy común que encuentre que PHP 5.x sigue siendo usado aún, siendo la versión 5.6 la mas reciente de la rama PHP 5.x. Lo cual no es una mala opción, pero es aconsejable actualizar a la versión estable mas reciente rápidamente. Dicha actualización es realmente muy fácil, debido a que no hay mayor [incompatibilidad con versiones anteriores][php70-bc]. Si no esta seguro de cual versión de una función o características esta usando, puedes revisar la documentación de PHP en el su sitio web [php.net][php-docs].
+Será muy común encontrar que PHP 5.x sigue siendo usado, la ultima versión de la rama 5.x es la versión 5.6. Esta no es una mala opción pero deberias intentar actualizar a la última versión estable lo más rápido posible, PHP 5.6 no recibirá actualizaciones de seguridad luego del año 2018. Actualizar es realmente fácil y no hay muchos [problemas de retrocompatibilidad que rompan el código][php71-bc]. Si no esta seguro sobre la versión de una función o caracteristica que esta usando puede revisar la documentación de PHP en el sitio web [php.net][php-docs].
 
-[php-release]: http://php.net/downloads.php
-[php-docs]: http://php.net/es/manual
-[php70-bc]: http://php.net/es/manual/migration70.incompatible.php
+[php-release]: http://www.php.net/downloads.php
+[php-docs]: http://www.php.net/manual/es/
+[php71-bc]: http://php.net/manual/migration71.incompatible.php
