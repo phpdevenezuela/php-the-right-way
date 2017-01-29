@@ -8,7 +8,7 @@ anchor:  user_groups
 
 Si vives en una gran ciudad, es posible que exista un Grupo de Usuarios PHP cerca. Puedes localizarlos fácilmente en
 la lista de [php.net][php-uglist] que se basa en los resultados de [PHP.ug][php-ug]. Otra forma de ubicarlos sería a
-través de la página [Meetup.com][meetup] ó realizando una consulta en tu motor de búsqueda favorito (por ejemplo:
+través de la página [Meetup.com][meetup] o una busqueda con las palabras ```grupo usuario php cerca de mi``` en tu motor de búsqueda favorito (por ejemplo:
 [Google][google]). Si vives en una ciudad pequeña, quizás no exista un grupo local; si ese es el caso: ¡Crea uno!
 
 Deben recibir menciones especiales dos grupos de usuarios globales: [NomadPHP] y [PHPWomen]. [NomadPHP] ofrece dos veces
