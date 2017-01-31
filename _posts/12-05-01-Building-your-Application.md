@@ -1,81 +1,59 @@
 ---
 title:   Construyendo tu Aplicación
 isChild: true
-anchor:  building_and_deploying_your_application
+anchor:  construyendo_y_desplegando_tu_aplicacion
 ---
 
-## Building and Deploying your Application {#building_and_deploying_your_application_title}
+## Construyendo Y Desplegando Tu Aplicación  {#construyendo_y_desplegando_tu_aplicacion_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even
-a continuous integration strategy, [build automation][buildautomation] is your friend.
+Si te encuentras haciendo cambios al esquema de base de datos o corriendo pruebas (de forma manual) antes de modificar tus archivos (de forma manual), entonces piénsalo nuevamente. Con cada tarea manual adicional para desplegar tu aplicación las oportunidades para la aparición de errores fatales se multiplican. Bien sea que estés manejando una simple actualización, un completo proceso de implementación o incluso una estrategia continua de integración, en esos casos la [automatización del build][buildautomation] es tu mejor amiga.
 
-Among the tasks you might want to automate are:
+Entre las tareas que podrías querer automatizar podemos encontrar: 
+* Manejo de dependencias.
+* Compilación y minificación de los recursos.
+* Corrida de pruebas.
+* Creación de la documentación.
+* Empaquetado.
+* Despliegue.
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+### Herramientas de automatización del build
 
+Las herramientas de automatización del build pueden ser descritas como una colección de scripts que manejan tareas comunes del despliegue de software. Las herramientas de automatización del build no son parte de tu software, ellas actúan sobre él desde fuera.
 
-### Build Automation Tools
+Hay muchas herramientas *open source* disponibles que pueden ayudarte con la automatización del build, algunas están escritas en PHP, otras en cambio no lo están, esto ultimo no debe limitarte al momento de usarlas si se ajustan mejor a alguna tarea específica. Aquí proponemos algunos ejemplos de esta clase de software:
 
-Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build tool
-is not a part of your software, it acts on your software from 'outside'.
+**[Phing]** representa la manera más fácil de comenzar a experimentar con el despliegue automático en el mundo de PHP. Con Phing puedes controlar tu empaquetado, despliegue o procesos de prueba desde un solo archivo XML. Phing (el cual está basado en [Apache Ant]) provee un rico set de tareas usualmente necesarias para instalar o actualizar una aplicación web, su funcionalidad puede ser extendida con tareas adicionales personalizadas escritas en PHP.
 
-There are many open source tools available to help you with build automation, some are written in PHP others aren't.
-This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+**[Capistrano]** es un Sistema para “programadores intermedios-avanzados” que permite ejecutar comandos de una forma estructurada y repetible en una o más maquinas remotas. Esta preconfigurado para el despliegue de aplicaciones en Ruby on Rails, sin embargo, hay personas que  **despliegan sistemas en PHP satisfactoriamente** con él. El uso satisfactorio de Capistrano depende de un conocimiento funcional de Ruby y Rake.
 
-[Phing] is the easiest way to get started with automated deployment in the PHP world. With Phing you can control your
-packaging, deployment or testing process from within a simple XML build file. Phing (which is based on [Apache Ant])
-provides a rich set of tasks usually needed to install or update a web app and can be extended with additional custom
-tasks, written in PHP.
+El artículo de Dave Gardner sobre [Despliegue de PHP con Capistrano][phpdeploy_capistrano] es un buen punto de partida para los desarrolladores PHP interesados en Capistrano.
 
-[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way
-on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and
-Rake.
+**[Chef]** es más que solo un framework de despliegue, es un poderoso framework de integración de sistemas basado en Ruby. No solo despliega tu aplicación, sino que también puede construir todo tu ambiente de servidor o cajas virtuales.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP
-developers interested in Capistrano.
+**[Deployer]** es una herramienta de despliegue escrita en PHP, es simple y funcional. Ejecuta tareas de despliegue atómico paralelo y mantiene la consistencia entre servidores. Contiene recetas para tareas comunes en Symfony, Laravel, Zend Framework y Yii.
 
-[Chef] is more than a deployment framework, it is a very powerful Ruby based system integration framework that doesn't
-just deploy your app but can build your whole server environment or virtual boxes.
+#### Recursos sobre Chef para desarrolladores PHP:
 
-[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii.
+* [Serie de artículos en tres partes acerca del despliegue de una aplicación LAMP con Chef, Vagrant y EC2][chef_vagrant_and_ec2]
+* [Recetario de Chef que te enseñara a instalar y configurar PHP y el sistema de manejo de paquetes PEAR][Chef_cookbook]
+* [Serie de video tutoriales sobre Chef][Chef_tutorial]
 
-#### Chef resources for PHP developers:
+#### Lecturas adicionales:
 
-* [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2][chef_vagrant_and_ec2]
-* [Chef Cookbook which installs and configures PHP and the PEAR package management system][Chef_cookbook]
-* [Chef video tutorial series][Chef_tutorial]
+* [Automatiza tu proyecto con Apache Ant][apache_ant_tutorial]
 
-#### Further reading:
-
-* [Automate your project with Apache Ant][apache_ant_tutorial]
-
-### Continuous Integration
-
-> Continuous Integration is a software development practice where members of a team integrate their work frequently,
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more
-> rapidly.
+### Integración Continua
+>La integración continua en una práctica del desarrollo de software en la cual los miembros de un equipo integran su trabajo de manera frecuente, usualmente cada persona hace integraciones diarias, lo que lleva a múltiples integraciones por día. Muchos grupos encuentran que este acercamiento genera una cantidad reducida de problemas de integración y permite al grupo desarrollar software cohesivo de una manera más rápida.
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
-making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service
-for the open source community. It is integrated with GitHub and offers first class support for many languages including
-PHP.
+Existen muchas maneras diferentes de implementar la integración continua para PHP. [Travis CI] ha hecho un trabajo grandioso haciendo de la integración continua una realidad, incluso para proyectos pequeños. Travis CI es un servicio hospedado de integración continua para la comunidad open source, está integrado con GitHub y ofrece soporte de primera clase para muchos lenguajes, entre ellos PHP.
 
-#### Further reading:
+#### Lecturas adicionales:
 
-* [Continuous Integration with Jenkins][Jenkins]
-* [Continuous Integration with PHPCI][PHPCI]
-* [Continuous Integration with Teamcity][Teamcity]
-
+* [Integración continua con Jenkins][Jenkins]
+* [Integración continua con PHPCI][PHPCI]
+* [Integración continua con Teamcity][Teamcity]
 
 [buildautomation]: http://en.wikipedia.org/wiki/Build_automation
 [Phing]: http://www.phing.info/
