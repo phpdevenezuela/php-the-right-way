@@ -8,7 +8,7 @@ anchor:  vagrant
 
 [Vagrant] te ayuda a construir *cajas* virtuales sobre la tecnología ofrecida por los más populares entornos de virtualización y configurar las mismas empleado solo un archivo de configuración. Dichas “cajas” pueden ser desplegadas de manera manual o bien puedes emplear algún software de aprovisionamiento tal como [Puppet] o [Chef] para tal fin. Aprovisionar una *caja base* es una forma ideal para asegurar que múltiples cajas pueden ser desplegadas con idénticas características lo que elimina la necesidad de mantener un complicado listado de comandos de instalación. Además, se puede destruir la *caja base* y recrearla sin la necesidad de llevar a cabo muchos pasos, haciendo sumamente fácil la creación de una “instalación fresca”.
 
-Vagrant crea directorios mediante que permiten compartir código entre el sistema anfitrión y la máquina virtual, lo permite crear y editar código en el computador y ejecútalo en la máquina virtual.
+Vagrant crea directorios que permiten compartir código entre el sistema anfitrión y la máquina virtual, lo permite crear y editar código en el computador y ejecútalo en la máquina virtual.
 
 ### Una pequeña ayuda
 
