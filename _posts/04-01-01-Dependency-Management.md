@@ -1,9 +1,9 @@
 ---
 title:  Gestión de Dependencias
-anchor: dependency_management
+anchor: gestion_de_dependencias
 ---
 
-# Dependency Management {#dependency_management_title}
+# Gestión de Dependencias {#gestion_de_dependencias_title}
 
 There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use
 several of them — these are project dependencies. Until recently, PHP did not have a good way to manage
@@ -14,5 +14,5 @@ Currently there are two major package management systems for PHP - [Composer] an
 the most popular package manager for PHP, however for a long time PEAR was the primary package manager in use.
 Knowing PEAR's history is a good idea, since you may still find references to it even if you never use it.
 
-[Composer]: /#composer_and_packagist
+[Composer]: /#composer_y_packagist
 [PEAR]: /#pear

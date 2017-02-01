@@ -1,13 +1,11 @@
 ---
 title:   Plataforma como Servicio (PaaS)
 isChild: true
-anchor:  platform_as_a_service
+anchor:  plataforma_como_servicio
 ---
 
-## Platform as a Service (PaaS) {#platform_as_a_service_title}
+## Plataforma como Servicio (PaaS) {#plataforma_como_servicio_title}
 
-PaaS provides the system and network architecture necessary to run PHP applications on the web. This means little to no
-configuration for launching PHP applications or PHP frameworks.
+El modelo PaaS provee del sistema y la arquitectura de red necesarios para correr aplicaciones PHP en la web. Lo cual implica ninguna o prácticamente ninguna necesidad de configuración previa para lanzar aplicaciones o frameworks de PHP.
 
-Recently PaaS has become a popular method for deploying, hosting, and scaling PHP applications of all sizes. You can
-find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources).
+Recientemente el modelo PaaS se ha convertido en un método popular para el despliegue, hospedaje y escalado de aplicaciones PHP sin importar el tamaño de estas. Puedes encontrar una lista de [proveedores de PHP PaaS “Plataforma como Servicio”](#php_paas_providers) en nuestra [sección de recursos](#recursos).
