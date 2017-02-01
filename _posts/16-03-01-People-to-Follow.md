@@ -1,14 +1,11 @@
 ---
 title:   Personas a Seguir
 isChild: true
-anchor:  people_to_follow
+anchor:  personas_a_seguir
 ---
 
-## People to Follow {#people_to_follow_title}
+## Personas a Seguir {#personas_a_seguir_title}
 
-It's difficult to find interesting and knowledgable PHP
-community members when you are first starting out. You can
-find a comprehensive list of PHP community members and their
-Twitter handles at:
+Es difícil localizar miembros interesantes y conocedores dentro de la comunidad de PHP cuando apenas estas comenzando. Puedes encontrar una lista de miembros de la comunidad y sus usuarios de Twitter en:
 
-<http://followphpdevs.com/>
+http://followphpdevs.com/

@@ -1,10 +1,10 @@
 ---
 title:   Documentación Principal
 isChild: true
-anchor:  from_the_source
+anchor:  documentacion_principal
 ---
 
-## From the Source {#from_the_source_title}
+## Documentación Principal {#documentacion_principal_title}
 
-* [PHP Website](http://php.net/)
-* [PHP Documentation](http://php.net/docs.php)
+* [Sitio Oficial de PHP](http://php.net/)
+* [Documentación Oficial de PHP](http://php.net/manual/es/)

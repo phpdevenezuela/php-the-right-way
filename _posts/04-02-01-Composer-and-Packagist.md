@@ -1,10 +1,10 @@
 ---
 title:   Composer y Packagist
 isChild: true
-anchor:  composer_and_packagist
+anchor:  composer_y_packagist
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer and Packagist {#composer_y_packagist_title}
 
 Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and,
 with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for

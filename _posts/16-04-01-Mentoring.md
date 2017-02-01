@@ -1,9 +1,9 @@
 ---
-title:   Mentoría
+title:   Mentorías
 isChild: true
-anchor:  mentoring
+anchor:  mentorias
 ---
 
-## Mentoring {#mentoring_title}
+## Mentorías {#mentorias_title}
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [php-mentoring.org](https://php-mentoring.org/) – Mentorías formales y de persona a persona dentro de la comunidad de PHP.
