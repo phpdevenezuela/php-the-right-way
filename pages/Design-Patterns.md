@@ -1,87 +1,88 @@
 ---
 layout: page
-title: Design Patterns
+title: Patrones de Diseño
 ---
 
-# Design Patterns
+# Patrones de Diseño
 
-There are numerous ways to structure the code and project for you web application, and you can put as much or as little
-thought as you like into architecting. But it is usually a good idea to follow to common patterns because it will make
-your code easier to manage and easier for others to understand.
+Hay muchas maneras de estructurar el código y el proyecto para tu aplicación web, y puedes poner tanto o tan poco
+pensado como te gusta en la arquitectura. Pero suele ser una buena idea seguir a patrones comunes porque hará tu código 
+más fácil de mantener y más fácil de entender para otros.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
 
-## Factory
+## Patrón Fábrica (Factory)
 
-One of the most commonly used design patterns is the factory pattern. This is a pattern is simply a class that creates
-the object you want to use. Consider the following example of the factory pattern:
+Uno de los patrones de diseño más utilizados es el patrón de fábrica (Factory). Este es un patrón que simplemente es una 
+clase que crea el objeto que desea utilizar. Considera el siguiente ejemplo del patrón de fábrica:
 
 {% highlight php %}
 <?php
-class Automobile
+class Automovil
 {
-    private $vehicle_make;
-    private $vehicle_model;
+    private $vehiculo_marca;
+    private $vehiculo_modelo;
 
-    public function __construct($make, $model)
+    public function __construct($marca, $modelo)
     {
-        $this->vehicle_make = $make;
-        $this->vehicle_model = $model;
+        $this->vehiculo_marca = $marca;
+        $this->vehiculo_modelo = $modelo;
     }
 
-    public function get_make_and_model()
+    public function get_marca_y_modelo()
     {
-        return $this->vehicle_make . ' ' . $this->vehicle_model;
+        return $this->vehiculo_marca . ' ' . $this->vehiculo_modelo;
     }
 }
 
-class AutomobileFactory
+class AutomovilFactory
 {
-    public static function create($make, $model)
+    public static function crear($marca, $modelo)
     {
-        return new Automobile($make, $model);
+        return new Automovil($marca, $modelo);
     }
 }
 
-// have the factory create the Automobile object
-$veyron = AutomobileFactory::create('Bugatti', 'Veyron');
+// hacer que la fabrica cree el objeto Automóvil
+$veyron = AutomovilFactory::crear('Bugatti', 'Veyron');
 
-print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
+print_r($veyron->get_marca_y_modelo()); // outputs "Bugatti Veyron"
 {% endhighlight %}
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way, the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile
-class. The second possible benefit is that if creating the object is a complicated job you can do all of the work in
-the factory, instead of repeating it every time you want to create a new instance.
+Este código utiliza una fábrica para crear el objeto Automóvil. Hay dos posibles beneficios para construir tu 
+código de esta manera, el primero es que si necesitas cambiar, renombrar o reemplazar la clase de automóvil más tarde, 
+puedes hacerlo y sólo tendrás que modificar el código de la fábrica, en lugar de Cada lugar en tu proyecto que utiliza 
+la clase de Automóvil. El segundo beneficio posible es que si la creación del objeto es un trabajo complicado se puede 
+hacer toda la lógica en la fábrica, en lugar de repetirlo cada vez que desees crear una nueva instancia.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+Usar el patrón Factory no siempre es necesario (o acertado). El código de ejemplo usado aquí es tan simple que una 
+fábrica simplemente agregaría complejidad innecesaria. Sin embargo, si está realizando un proyecto lo bastante grande o 
+complejo, puedes ahorrar un montón de problemas en el camino mediante el uso de fábricas.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
-## Front Controller
+## Controlador Frontal (Front Controller)
 
-The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
-handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
-sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
-and gives you a central place to hook in code that should be run for every request (such as input sanitization).
+El patrón Controlador Frontal es donde tienes un único punto de entrada para tu aplicación web (por ejemplo, index.php) 
+que maneja todas las peticiones. Este código es responsable de cargar todas las dependencias, procesar la solicitud y 
+enviar la respuesta al navegador. El patrón Controlador Frontal puede ser beneficioso porque alienta el código modular 
+y te da un lugar central para conectar el código que debe ejecutarse para cada solicitud (como la sanitización de 
+entrada).
 
 * [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
-## Model-View-Controller
+## Modelo-Vista-Controlador (Model-View-Controller)
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects that
-serve very specific purposes. Models serve as a data access layer where data it fetched and returned in formats usable
-throughout your application. Controllers handle the request, process the data returned from models and load views to
-send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web
-browser.
+El patrón de modelo-vista-controlador (MVC) y sus parientes HMVC y MVVM te permiten dividir el código en objetos lógicos 
+que servirán a fines muy específicos. Los modelos sirven como capa de acceso a datos donde los datos que se obtienen y 
+devuelven en formatos utilizables en toda tu aplicación. Los controladores manejan la solicitud, procesan los datos 
+devueltos de los modelos y cargan las vistas para enviar la respuesta. Y las vistas son plantillas de visualización 
+(html, xml, etc) que se envían en la respuesta al navegador web.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+MVC es el patrón arquitectónico más común utilizado en los [frameworks PHP](https://github.com/codeguy/php-the-right-way/wiki/Frameworks) mas populares.
 
-Learn more about MVC and its relatives:
+Aprende mas acerca de MVC y sus patrones parientes:
 
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
